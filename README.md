@@ -3,7 +3,7 @@ This is our Codepath Project of Spring 2021
 
 ## Team Members:
 - Farhene Sultana
-- (Add your names here)
+- Nancy Jennifer Ng
 
 ## How to run our Meal Snap Project
 
