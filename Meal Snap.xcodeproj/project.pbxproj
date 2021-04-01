@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E0D3EED326160F2D004D5E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3EED226160F2D004D5E66 /* AppDelegate.swift */; };
+		E0D3EED526160F2D004D5E66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3EED426160F2D004D5E66 /* SceneDelegate.swift */; };
+		E0D3EED726160F2D004D5E66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3EED626160F2D004D5E66 /* ViewController.swift */; };
+		E0D3EEDA26160F2D004D5E66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D3EED826160F2D004D5E66 /* Main.storyboard */; };
+		E0D3EEDC26160F2D004D5E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D3EEDB26160F2D004D5E66 /* Assets.xcassets */; };
+		E0D3EEDF26160F2D004D5E66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D3EEDD26160F2D004D5E66 /* LaunchScreen.storyboard */; };
+		E0D3EEEA26160F2E004D5E66 /* Meal_SnapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3EEE926160F2E004D5E66 /* Meal_SnapTests.swift */; };
+		E0D3EEF526160F2E004D5E66 /* Meal_SnapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3EEF426160F2E004D5E66 /* Meal_SnapUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0D3EEE626160F2E004D5E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0D3EEC726160F2C004D5E66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0D3EECE26160F2C004D5E66;
+			remoteInfo = "Meal Snap";
+		};
+		E0D3EEF126160F2E004D5E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0D3EEC726160F2C004D5E66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0D3EECE26160F2C004D5E66;
+			remoteInfo = "Meal Snap";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E0D3EECF26160F2D004D5E66 /* Meal Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Snap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0D3EED226160F2D004D5E66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E0D3EED426160F2D004D5E66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E0D3EED626160F2D004D5E66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E0D3EED926160F2D004D5E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E0D3EEDB26160F2D004D5E66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E0D3EEDE26160F2D004D5E66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E0D3EEE026160F2D004D5E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0D3EEE526160F2E004D5E66 /* Meal SnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meal SnapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0D3EEE926160F2E004D5E66 /* Meal_SnapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal_SnapTests.swift; sourceTree = "<group>"; };
+		E0D3EEEB26160F2E004D5E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0D3EEF026160F2E004D5E66 /* Meal SnapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meal SnapUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0D3EEF426160F2E004D5E66 /* Meal_SnapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal_SnapUITests.swift; sourceTree = "<group>"; };
+		E0D3EEF626160F2E004D5E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0D3EECC26160F2C004D5E66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0D3EEE226160F2E004D5E66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0D3EEED26160F2E004D5E66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E0D3EEC626160F2C004D5E66 = {
+			isa = PBXGroup;
+			children = (
+				E0D3EED126160F2D004D5E66 /* Meal Snap */,
+				E0D3EEE826160F2E004D5E66 /* Meal SnapTests */,
+				E0D3EEF326160F2E004D5E66 /* Meal SnapUITests */,
+				E0D3EED026160F2D004D5E66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E0D3EED026160F2D004D5E66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0D3EECF26160F2D004D5E66 /* Meal Snap.app */,
+				E0D3EEE526160F2E004D5E66 /* Meal SnapTests.xctest */,
+				E0D3EEF026160F2E004D5E66 /* Meal SnapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0D3EED126160F2D004D5E66 /* Meal Snap */ = {
+			isa = PBXGroup;
+			children = (
+				E0D3EED226160F2D004D5E66 /* AppDelegate.swift */,
+				E0D3EED426160F2D004D5E66 /* SceneDelegate.swift */,
+				E0D3EED626160F2D004D5E66 /* ViewController.swift */,
+				E0D3EED826160F2D004D5E66 /* Main.storyboard */,
+				E0D3EEDB26160F2D004D5E66 /* Assets.xcassets */,
+				E0D3EEDD26160F2D004D5E66 /* LaunchScreen.storyboard */,
+				E0D3EEE026160F2D004D5E66 /* Info.plist */,
+			);
+			path = "Meal Snap";
+			sourceTree = "<group>";
+		};
+		E0D3EEE826160F2E004D5E66 /* Meal SnapTests */ = {
+			isa = PBXGroup;
+			children = (
+				E0D3EEE926160F2E004D5E66 /* Meal_SnapTests.swift */,
+				E0D3EEEB26160F2E004D5E66 /* Info.plist */,
+			);
+			path = "Meal SnapTests";
+			sourceTree = "<group>";
+		};
+		E0D3EEF326160F2E004D5E66 /* Meal SnapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E0D3EEF426160F2E004D5E66 /* Meal_SnapUITests.swift */,
+				E0D3EEF626160F2E004D5E66 /* Info.plist */,
+			);
+			path = "Meal SnapUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E0D3EECE26160F2C004D5E66 /* Meal Snap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0D3EEF926160F2E004D5E66 /* Build configuration list for PBXNativeTarget "Meal Snap" */;
+			buildPhases = (
+				E0D3EECB26160F2C004D5E66 /* Sources */,
+				E0D3EECC26160F2C004D5E66 /* Frameworks */,
+				E0D3EECD26160F2C004D5E66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Meal Snap";
+			productName = "Meal Snap";
+			productReference = E0D3EECF26160F2D004D5E66 /* Meal Snap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E0D3EEE426160F2E004D5E66 /* Meal SnapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0D3EEFC26160F2E004D5E66 /* Build configuration list for PBXNativeTarget "Meal SnapTests" */;
+			buildPhases = (
+				E0D3EEE126160F2E004D5E66 /* Sources */,
+				E0D3EEE226160F2E004D5E66 /* Frameworks */,
+				E0D3EEE326160F2E004D5E66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0D3EEE726160F2E004D5E66 /* PBXTargetDependency */,
+			);
+			name = "Meal SnapTests";
+			productName = "Meal SnapTests";
+			productReference = E0D3EEE526160F2E004D5E66 /* Meal SnapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E0D3EEEF26160F2E004D5E66 /* Meal SnapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0D3EEFF26160F2E004D5E66 /* Build configuration list for PBXNativeTarget "Meal SnapUITests" */;
+			buildPhases = (
+				E0D3EEEC26160F2E004D5E66 /* Sources */,
+				E0D3EEED26160F2E004D5E66 /* Frameworks */,
+				E0D3EEEE26160F2E004D5E66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0D3EEF226160F2E004D5E66 /* PBXTargetDependency */,
+			);
+			name = "Meal SnapUITests";
+			productName = "Meal SnapUITests";
+			productReference = E0D3EEF026160F2E004D5E66 /* Meal SnapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0D3EEC726160F2C004D5E66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					E0D3EECE26160F2C004D5E66 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					E0D3EEE426160F2E004D5E66 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = E0D3EECE26160F2C004D5E66;
+					};
+					E0D3EEEF26160F2E004D5E66 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = E0D3EECE26160F2C004D5E66;
+					};
+				};
+			};
+			buildConfigurationList = E0D3EECA26160F2C004D5E66 /* Build configuration list for PBXProject "Meal Snap" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E0D3EEC626160F2C004D5E66;
+			productRefGroup = E0D3EED026160F2D004D5E66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0D3EECE26160F2C004D5E66 /* Meal Snap */,
+				E0D3EEE426160F2E004D5E66 /* Meal SnapTests */,
+				E0D3EEEF26160F2E004D5E66 /* Meal SnapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0D3EECD26160F2C004D5E66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0D3EEDF26160F2D004D5E66 /* LaunchScreen.storyboard in Resources */,
+				E0D3EEDC26160F2D004D5E66 /* Assets.xcassets in Resources */,
+				E0D3EEDA26160F2D004D5E66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0D3EEE326160F2E004D5E66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0D3EEEE26160F2E004D5E66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0D3EECB26160F2C004D5E66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0D3EED726160F2D004D5E66 /* ViewController.swift in Sources */,
+				E0D3EED326160F2D004D5E66 /* AppDelegate.swift in Sources */,
+				E0D3EED526160F2D004D5E66 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0D3EEE126160F2E004D5E66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0D3EEEA26160F2E004D5E66 /* Meal_SnapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0D3EEEC26160F2E004D5E66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0D3EEF526160F2E004D5E66 /* Meal_SnapUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0D3EEE726160F2E004D5E66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0D3EECE26160F2C004D5E66 /* Meal Snap */;
+			targetProxy = E0D3EEE626160F2E004D5E66 /* PBXContainerItemProxy */;
+		};
+		E0D3EEF226160F2E004D5E66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0D3EECE26160F2C004D5E66 /* Meal Snap */;
+			targetProxy = E0D3EEF126160F2E004D5E66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E0D3EED826160F2D004D5E66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0D3EED926160F2D004D5E66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E0D3EEDD26160F2D004D5E66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0D3EEDE26160F2D004D5E66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E0D3EEF726160F2E004D5E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E0D3EEF826160F2E004D5E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0D3EEFA26160F2E004D5E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Meal Snap/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Meal-Snap";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E0D3EEFB26160F2E004D5E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Meal Snap/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Meal-Snap";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E0D3EEFD26160F2E004D5E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Meal SnapTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Meal-SnapTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meal Snap.app/Meal Snap";
+			};
+			name = Debug;
+		};
+		E0D3EEFE26160F2E004D5E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Meal SnapTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Meal-SnapTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meal Snap.app/Meal Snap";
+			};
+			name = Release;
+		};
+		E0D3EF0026160F2E004D5E66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Meal SnapUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Meal-SnapUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Meal Snap";
+			};
+			name = Debug;
+		};
+		E0D3EF0126160F2E004D5E66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Meal SnapUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Codepath.Meal-SnapUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Meal Snap";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0D3EECA26160F2C004D5E66 /* Build configuration list for PBXProject "Meal Snap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0D3EEF726160F2E004D5E66 /* Debug */,
+				E0D3EEF826160F2E004D5E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0D3EEF926160F2E004D5E66 /* Build configuration list for PBXNativeTarget "Meal Snap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0D3EEFA26160F2E004D5E66 /* Debug */,
+				E0D3EEFB26160F2E004D5E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0D3EEFC26160F2E004D5E66 /* Build configuration list for PBXNativeTarget "Meal SnapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0D3EEFD26160F2E004D5E66 /* Debug */,
+				E0D3EEFE26160F2E004D5E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0D3EEFF26160F2E004D5E66 /* Build configuration list for PBXNativeTarget "Meal SnapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0D3EF0026160F2E004D5E66 /* Debug */,
+				E0D3EF0126160F2E004D5E66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E0D3EEC726160F2C004D5E66 /* Project object */;
+}
