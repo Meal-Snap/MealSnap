@@ -1,0 +1,6 @@
+framework module Pods_Meal_Snap_Meal_SnapUITests {
+  umbrella header "Pods-Meal Snap-Meal SnapUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

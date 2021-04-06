@@ -1,0 +1,6 @@
+framework module Pods_Meal_Snap {
+  umbrella header "Pods-Meal Snap-umbrella.h"
+
+  export *
+  module * { export * }
+}
