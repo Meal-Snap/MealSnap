@@ -1,11 +1,13 @@
+
 //
 //  AppDelegate.swift
 //  Meal Snap
 //
-//  Created by Farhene Sultana on 4/1/21.
+//  Created by Farhene Sultana on 4/1/21. Edited by Alisha Sunuwar
 //
 
 import UIKit
+import Parse
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+            let parseConfig = ParseClientConfiguration {
+                    $0.applicationId = "kRaOcSAbzxBp6oCP6tw41dpNbQGgvv2SHnuHTSEH" // <- UPDATE
+                    $0.clientKey = "ZIy0NyVYxajrrmhwjkN6nO2DAJfHUlOfnH1fkBYd" // <- UPDATE
+                    $0.server = "https://parseapi.back4app.com"
+            }
+            Parse.initialize(with: parseConfig)
+
         return true
     }
 
