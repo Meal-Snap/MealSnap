@@ -1,13 +1,10 @@
-# Meal-Snap
-This is our Codepath Project of Spring 2021
+# MealSnap
 
 ## Team Members:
 - Farhene Sultana
 - Nancy Jennifer Ng
 - Sam Gustafsson
 - Alisha Sunuwar
-
-# MealSnap
 
 ## Table of Contents
 1. [Overview](#Overview)
