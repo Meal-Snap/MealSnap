@@ -7,6 +7,7 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class UploadPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -20,9 +21,30 @@ class UploadPhotoViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func onShareButton(_ sender: Any) {
+        let post = PFObject(className: "Posts")
+        
+        post["caption"] = commentField.text!
+        post["author"] = PFUser.current()!
+        
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(data: imageData!)
+        
+        post["image"] = file
+        
+        post.saveInBackground { (success, error) in
+            if success{
+                self.dismiss(animated: true, completion: nil)
+                print("Saved!")
+            } else {
+                print("Error!")
+            }
+        }
     }
+    
     @IBAction func onCancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func onCameraButton(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
