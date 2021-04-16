@@ -103,7 +103,7 @@ We wanted to separate the food out of all social media and have it in one social
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://cdn.discordapp.com/attachments/815981484744900630/832627908522278963/image0.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
