@@ -14,7 +14,12 @@
 
 ## Overview
 ### Description
-[Description of your app]
+
+Our social media app is aimed for foodies or food lovers (same idea 😆)!
+We aim to create a platform where foodies can post their recipes and also a caption along with an image of their foods. 
+Users will be able to search via the search field to find foods to try out or check out as well as like the posts and hopefully comment.
+Users will also be prompted upon account creation to select their food preferences (as we plan to) to then have their feed show other users’s foods that align to their taste.
+We wanted to separate the food out of all social media and have it in one social platform so that it’s easier to find posts on just food! :3
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
