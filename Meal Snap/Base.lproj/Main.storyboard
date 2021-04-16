@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -145,45 +146,59 @@
             </objects>
             <point key="canvasLocation" x="1759" y="-737"/>
         </scene>
-        <!--View Controller-->
+        <!--Upload-->
         <scene sceneID="GMQ-Kz-D3g">
             <objects>
-                <viewController id="3Lz-es-DEx" sceneMemberID="viewController">
+                <viewController id="3Lz-es-DEx" customClass="UploadPhotoViewController" customModule="Meal_Snap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vh5-oa-67S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwq-4H-ssY">
-                                <rect key="frame" x="154" y="264" width="106" height="66"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YvI-os-kko">
+                                <rect key="frame" x="20" y="88.5" width="374" height="374"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Uploading Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCb-rU-6EL">
-                                <rect key="frame" x="37" y="419" width="341" height="58"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eqP-tC-2gS" appends="YES" id="Lou-NW-LuN"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aAC-8E-FvF">
+                                <rect key="frame" x="20" y="472" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3JS-pK-LZ1">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="Posts" image="rectangle.grid.1x2.fill" catalog="system" id="WOc-pn-Yz3"/>
-                                    <tabBarItem title="Profile" image="person.circle" catalog="system" id="7a7-WA-KJb"/>
-                                </items>
-                            </tabBar>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oYh-Xd-2hl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" name="AccentColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Upload" id="YH4-l3-jZi">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="NDV-Zv-R70">
+                            <connections>
+                                <action selector="onCancelButton:" destination="3Lz-es-DEx" id="zCM-UV-R5a"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="5vC-b8-0iF">
+                            <connections>
+                                <action selector="onShareButton:" destination="3Lz-es-DEx" id="oVi-ii-W7Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="commentField" destination="aAC-8E-FvF" id="0F8-Se-dSP"/>
+                        <outlet property="imageView" destination="YvI-os-kko" id="aOE-4j-qVy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVg-Yx-tfi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eqP-tC-2gS">
+                    <connections>
+                        <action selector="onCameraButton:" destination="3Lz-es-DEx" id="r6p-Tg-u7h"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1190" y="706"/>
+            <point key="canvasLocation" x="1189.8550724637682" y="1470.5357142857142"/>
         </scene>
         <!--Profile-->
         <scene sceneID="m0N-fA-cj5">
@@ -199,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mgo-nB-Dky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2038" y="706"/>
+            <point key="canvasLocation" x="2052" y="706"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6Gd-HO-UPv">
@@ -307,6 +322,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="FFX-yk-KhY" kind="relationship" relationship="viewControllers" id="4NC-ug-XOI"/>
+                        <segue destination="QD3-sw-YMv" kind="relationship" relationship="viewControllers" id="WQl-fn-MVV"/>
                         <segue destination="LPl-ng-aP3" kind="relationship" relationship="viewControllers" id="v57-hd-LHM"/>
                     </connections>
                 </tabBarController>
@@ -314,10 +330,34 @@
             </objects>
             <point key="canvasLocation" x="883" y="-32"/>
         </scene>
+        <!--Upload-->
+        <scene sceneID="mtm-al-q2e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QD3-sw-YMv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Upload" image="plus" catalog="system" id="HSb-xM-NM9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iDX-1s-gE9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3Lz-es-DEx" kind="relationship" relationship="rootViewController" id="3kd-O2-HO5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7i-ZB-FhV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189.8550724637682" y="705.80357142857144"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="rectangle.grid.1x2.fill" catalog="system" width="128" height="101"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

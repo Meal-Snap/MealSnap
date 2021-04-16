@@ -6,6 +6,7 @@ target 'Meal Snap' do
   use_frameworks!
 
   # Pods for Meal Snap
+  pod "AlamofireImage"
 
   target 'Meal SnapTests' do
     inherit! :search_paths
