@@ -93,6 +93,8 @@ We wanted to separate the food out of all social media and have it in one social
        * Users can create posts
     * Login Screen
         * If Users logged out
+   * Recipe View Screen
+        * User can view recipe in a separate page
 
     * Profile Screen [Optional]
 * Creation
@@ -102,7 +104,6 @@ We wanted to separate the food out of all social media and have it in one social
     * Stream Screen
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
 <img src="https://cdn.discordapp.com/attachments/815981484744900630/832627908522278963/image0.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
@@ -110,10 +111,166 @@ We wanted to separate the food out of all social media and have it in one social
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+#### Post
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user post (default field) |
+   | author        | Pointer to User| image author |
+   | image         | File     | image that user posts |
+   | caption       | String   | image caption by author |
+   | likesCount    | Number   | number of likes for the post |
+   | createdAt     | DateTime | date when post is created (default field) |
+   | updatedAt     | DateTime | date when post is last updated (default field) |
+   | recipe        | Pointer to Post | recipe that user added in their post |
+
+#### Users
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user (default field) |
+   | emailVerified | Boolean  | email verifier (default field) |
+   | username      | String   | unique name of User |
+   | password      | String   | unique password of User |
+   | email         | String   | unique email of User |
+   | author        | Pointer to User| image of author |
+   | image         | File     | profile image of user |
+   | bio           | String   | profile bio by author |
+   | createdAt     | DateTime | date when user account is created (default field) |
+   | updatedAt     | DateTime | date when user updates their image or bio (default field) |
+
+#### Likes 
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user (default field) |
+   | createdAt     | DateTime | date when user account is created (default field) |
+   | updatedAt     | DateTime | date when user updates their image or bio (default field) |
+   
+#### Recipe 
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user (default field) |
+   | createdAt     | DateTime | date when recipe is created (default field) |
+   | title         | String   | title of the recipe of the Post |
+   | ingredients   | String   | ingredients of the recipe of the Post |
+   | directions    | String   | instructions on how to make the food from recipe of the Post | 
+   | author        | Pointer to Post | 
+
+
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- [Basic snippets for each Parse network request]
+   - Login/Sign Up Screen 
+      - (Create/POST) Create a new user object
+      - (Read/GET) Query logged in user object to log in 
+        ```swift
+        let username = usernameField.text!
+        let password = passwordField.text!
+        print("username :", username,"password :", password)
+        PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
+            if user != nil{
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }else{
+                print("Error: (String(describing: error?.localizedDescription))")
+                self.showErrorDialog(error: (String(describing: error!.localizedDescription)))
+            }
+        }
+        ```
+   - Home Feed Screen
+      - (Read/GET) Query all posts where user is author {Note: we kept the sample code here because we feel we could borrow from it}
+         ```swift
+         let query = PFQuery(className:"Post")
+         query.whereKey("author", equalTo: currentUser)
+         query.order(byDescending: "createdAt")
+         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+            if let error = error { 
+               print(error.localizedDescription)
+            } else if let posts = posts {
+               print("Successfully retrieved \(posts.count) posts.")
+           // TODO: Do something with posts...
+            }
+         }
+         ```
+      - [OPTIONAL] (Read/GET) Query all posts which user seeks for [whether it is #glutenfree... etc]
+      - (Create/POST) Create a new like on a post
+      - (Delete) Delete existing like
+   - Create Post Screen
+      - (Create/POST) Create a new post object
+         ```swift
+         let post = PFObject(className: "Posts")
+
+        post["caption"] = commentField.text!
+        post["author"] = PFUser.current()!
+
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(data: imageData!)
+
+        post["image"] = file
+
+        post.saveInBackground { (success, error) in
+            if success{
+                self.dismiss(animated: true, completion: nil)
+                print("Saved!")
+            } else {
+                print("Error!")
+            }
+        }
+         ```
+   - Create Recipe Screen
+      - (Create/POST) Create a recipe under the post object
+         ```swift
+        let recipe = PFObject(className: "Recipe")
+
+        recipe["title"] = titleField.text!
+        recipe["ingredients"] = itemField.text!
+        recipe["directions"] = directionsField.text!
+        recipe["author"] = PFUser.current()!
+
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(data: imageData!)
+
+        recipe["image"] = file
+
+        recipe.saveInBackground { (success, error) in
+            if success{
+                self.dismiss(animated: true, completion: nil)
+                print("Saved!")
+            } else {
+                print("Error!")
+            }
+        }
+         ```
+   - Profile Screen
+      - (Read/GET) Query logged in user object
+         ```swift
+         let query = PFQuery(className:"User")
+         query.whereKey("author", equalTo: currentUser)
+         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+           // TODO: Do something with Profile...
+            }
+         }
+         ```
+      - (Update/PUT) Update user profile image
+      - (Update/PUT) Update user bio
+      - [OPTIONAL] (Read/GET) Query all posts which the user had posted
+   - PostDetail Screen
+      - (Read/GET) Query all details connected to one post including Recipe, image, caption, likesCount...etc
+         ```swift
+         let query = PFQuery(className:"Post")
+         query.whereKey("author", equalTo: currentUser)
+         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+           // TODO: Do something with Posts to access the details of the Post...
+            }
+         }
+         ```
+   - RecipeDetail Screen
+      - (Read/GET) Query all details connected to the recipe object under that post
+         ```swift
+         let query = PFQuery(className:"Recipe")
+         query.whereKey("author", equalTo: currentUser)
+         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+           // TODO: Do something with Profile...
+            }
+         }
+         ```
