@@ -6,14 +6,21 @@
 //
 
 import UIKit
+import AlamofireImage
 
-class FeedViewController: UIViewController {
-
+class FeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+  
+    
+    //Nancy Ng 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+
     
     @IBAction func onLogOut(_ sender: Any) {
         let main = UIStoryboard(name: "Main", bundle: nil)
@@ -23,6 +30,13 @@ class FeedViewController: UIViewController {
         delegate.window?.rootViewController = loginVC
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
     /*
     // MARK: - Navigation
 
