@@ -156,6 +156,7 @@
                                             <outlet property="FoodImageCell" destination="0ok-mz-MJW" id="en3-JQ-yR1"/>
                                             <outlet property="PostUsername" destination="LWm-sc-i9d" id="Opr-rg-T58"/>
                                             <outlet property="UsernameLabel" destination="LWm-sc-i9d" id="qk3-ss-WXm"/>
+                                            <segue destination="DiL-Hx-Ff2" kind="show" id="5ZT-li-fH2"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -174,12 +175,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="DhZ-VZ-lJF" id="oXn-Pw-w1Q"/>
-                        <segue destination="DiL-Hx-Ff2" kind="show" id="cfH-bT-w0m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n0N-8c-6Zw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2598.5507246376815" y="722.54464285714278"/>
+            <point key="canvasLocation" x="2226" y="723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UP4-4v-dPN">
@@ -386,10 +386,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="723"/>
         </scene>
-        <!--DetailsViewController-->
+        <!--PostDetailsViewController-->
         <scene sceneID="6Gd-HO-UPv">
             <objects>
-                <viewController title="DetailsViewController" id="DiL-Hx-Ff2" sceneMemberID="viewController">
+                <viewController title="PostDetailsViewController" id="DiL-Hx-Ff2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z1Q-rO-WSA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -519,28 +519,7 @@
             </objects>
             <point key="canvasLocation" x="2642" y="-6"/>
         </scene>
-        <!--DetailsViewController-->
-        <scene sceneID="Rdf-vW-JCL">
-            <objects>
-                <navigationController title="DetailsViewController" automaticallyAdjustsScrollViewInsets="NO" id="nSs-LB-axq" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WS2-bP-MbG">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="DiL-Hx-Ff2" kind="relationship" relationship="rootViewController" id="GZa-PI-r6d"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dSP-0J-kEY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1700" y="723"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="cfH-bT-w0m"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>

@@ -12,4 +12,6 @@ class PostCell: UICollectionViewCell {
     @IBOutlet weak var FoodImageCell: UIImageView!
     @IBOutlet weak var PostUsername: UILabel!
     
+    
+    
 }
