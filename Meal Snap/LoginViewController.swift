@@ -13,7 +13,21 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var SignInButton: UIButton!{
+        didSet{
+            SignInButton.layer.cornerRadius = 10
+            SignInButton.layer.borderWidth = 2
+            SignInButton.layer.borderColor = UIColor.white.cgColor
+        }
+    }
     
+    @IBOutlet weak var SignUpButton: UIButton!{
+        didSet{
+            SignUpButton.layer.cornerRadius = 10
+            SignUpButton.layer.borderWidth = 2
+            SignUpButton.layer.borderColor = UIColor.white.cgColor
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -21,6 +21,7 @@
 		E0D3EEDF26160F2D004D5E66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D3EEDD26160F2D004D5E66 /* LaunchScreen.storyboard */; };
 		E0D3EEEA26160F2E004D5E66 /* Meal_SnapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3EEE926160F2E004D5E66 /* Meal_SnapTests.swift */; };
 		E0D3EEF526160F2E004D5E66 /* Meal_SnapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3EEF426160F2E004D5E66 /* Meal_SnapUITests.swift */; };
+		E0F60CC72634843B00DFE7F3 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F60CC62634843B00DFE7F3 /* PostDetailsViewController.swift */; };
 		F626C7889733B0A15EBFF1F8 /* Pods_Meal_SnapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B6218F9836033B7A4A8AB9 /* Pods_Meal_SnapTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		E0D3EEF026160F2E004D5E66 /* Meal SnapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Meal SnapUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D3EEF426160F2E004D5E66 /* Meal_SnapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal_SnapUITests.swift; sourceTree = "<group>"; };
 		E0D3EEF626160F2E004D5E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0F60CC62634843B00DFE7F3 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				E0D3EEDD26160F2D004D5E66 /* LaunchScreen.storyboard */,
 				E0D3EEE026160F2D004D5E66 /* Info.plist */,
 				B93EFDDF2631C86F00BF7F4E /* PostCell.swift */,
+				E0F60CC62634843B00DFE7F3 /* PostDetailsViewController.swift */,
 			);
 			path = "Meal Snap";
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				E0D3EED726160F2D004D5E66 /* ViewController.swift in Sources */,
 				E0D3EED326160F2D004D5E66 /* AppDelegate.swift in Sources */,
 				E0D3EED526160F2D004D5E66 /* SceneDelegate.swift in Sources */,
+				E0F60CC72634843B00DFE7F3 /* PostDetailsViewController.swift in Sources */,
 				58105166262A3092002A8BB7 /* UploadPhotoViewController.swift in Sources */,
 				A3D0BF16261CC126001E58C2 /* FeedViewController.swift in Sources */,
 			);

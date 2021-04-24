@@ -14,6 +14,8 @@ class UploadPhotoViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var commentField: UITextField!
     
+    @IBOutlet weak var postTitleLabel: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +25,7 @@ class UploadPhotoViewController: UIViewController, UIImagePickerControllerDelega
     @IBAction func onShareButton(_ sender: Any) {
         let post = PFObject(className: "Posts")
         
+        post["title"] = postTitleLabel.text!
         post["caption"] = commentField.text!
         post["author"] = PFUser.current()!
         
