@@ -16,11 +16,22 @@ class UploadPhotoViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBOutlet weak var postTitleLabel: UITextField!
     
+    @IBOutlet weak var addRecipeButton: UIButton!{
+        didSet{
+            addRecipeButton.layer.cornerRadius = 10
+            addRecipeButton.layer.borderWidth = 2
+            addRecipeButton.layer.borderColor = UIColor.lightGray.cgColor
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
     
     @IBAction func onShareButton(_ sender: Any) {
         let post = PFObject(className: "Posts")

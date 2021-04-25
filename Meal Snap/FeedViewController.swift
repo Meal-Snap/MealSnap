@@ -26,8 +26,6 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     }
     
-
-    
     @IBAction func onLogOut(_ sender: Any) {
         let main = UIStoryboard(name: "Main", bundle: nil)
         let loginVC = main.instantiateViewController(identifier: "LoginViewController")
@@ -44,18 +42,19 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as! PostCell
 
-            //let post = posts[indexPath.item]
-        
-            //let user = posts["author"] as! PFUser
-            //cell.PostUsername.text = user.username
-        
-            //let imageFile = posts["image"] as! PFFileObject
+        let post = posts[indexPath.item]
 
-                //remember the ?? are about optionals!
-            //cell.FoodImageCell.af_setImage(imageFile)
+        let user = post["author"] as! PFUser
+        cell.PostUsername.text = user.username
+
+        let imageFile = post["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
+
+//                remember the ?? are about optionals!
+        cell.FoodImageCell.af_setImage(withURL: url)
     
-
-            return cell
+        return cell
     }
     
 //    override func viewDidAppear(_ animated: Bool) {
@@ -78,19 +77,19 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
 
 
 //     In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-////        //Task 1 - find selected posts
-//        let cell = sender as! UICollectionViewCell
-//        let indexPath = collectionView.indexPath(for: cell)!
-//        let post = posts[indexPath.row]
-////
-//        //Task 2 - Store posts into details controller
-//        let detailsViewController = segue.destination as! PostDetailsViewController
-//        //detailsViewController.post = post
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        //Task 1 - find selected posts
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let mealPost = posts[indexPath.row]
 //
-//        //while transitioning, this disables the highlighted feature of each cell that was selected
-//        collectionView.deselectItem(at: indexPath, animated: true)
-//    }
+        //Task 2 - Store posts into details controller
+        let detailsViewController = segue.destination as! PostDetailsViewController
+        //detailsViewController.post = mealPost
+
+        //while transitioning, this disables the highlighted feature of each cell that was selected
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
 
 
 }
