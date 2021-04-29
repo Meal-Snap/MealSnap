@@ -26,6 +26,23 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+
+            //here I will make the query
+            let query = PFQuery(className: "Posts")
+            query.includeKeys(["author"])
+            query.limit = 20 //get the last 20
+
+            query.findObjectsInBackground { (posts, error) in
+                if posts != nil { //success
+                    self.posts = posts!
+                    self.collectionView.reloadData()
+                }
+                print(posts)
+            }
+        }
+    
     @IBAction func onLogOut(_ sender: Any) {
         let main = UIStoryboard(name: "Main", bundle: nil)
         let loginVC = main.instantiateViewController(identifier: "LoginViewController")
@@ -57,21 +74,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         return cell
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//            super.viewDidAppear(animated)
-//
-//            //here I will make the query
-//            let query = PFQuery(className: "Posts")
-//            query.includeKeys(["author"])
-//            query.limit = 20 //get the last 20
-//
-//            query.findObjectsInBackground { (posts, error) in
-//                if posts != nil { //success
-//                    self.posts = posts!
-//                    self.collectionView.reloadData()
-//                }
-//            }
-//        }
+
 
     
 
@@ -81,11 +84,12 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
 //        //Task 1 - find selected posts
         let cell = sender as! UICollectionViewCell
         let indexPath = collectionView.indexPath(for: cell)!
-        let mealPost = posts[indexPath.row]
+        let post = posts[indexPath.row]
+        //var post: PFObject!
 //
         //Task 2 - Store posts into details controller
         let detailsViewController = segue.destination as! PostDetailsViewController
-        //detailsViewController.post = mealPost
+        detailsViewController.post = post
 
         //while transitioning, this disables the highlighted feature of each cell that was selected
         collectionView.deselectItem(at: indexPath, animated: true)

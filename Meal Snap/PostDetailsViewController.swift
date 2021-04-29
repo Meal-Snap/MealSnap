@@ -18,26 +18,35 @@ class PostDetailsViewController: UIViewController {
     @IBOutlet weak var captionLabel: UILabel!
     
     
-    var post = [PFObject]()
+    var post: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        
-//        // Do any additional setup after loading the view.
-//        usernameLabel.text = post["username"] as? String
-//        postNameLabel.text = post["title"] as? String//we need to add title in our Posts class
-//        captionLabel.text = post["caption"] as? String
-//        
-//        userImage = post["userpic"] as! PFFileObject
-//        imagePost = post["image"] as! PFFileObject
-//        
+        
+        // Do any additional setup after loading the view.
+        usernameLabel.text = post["username"] as? String
+        postNameLabel.text = post["title"] as? String//we need to add title in our Posts class
+        captionLabel.text = post["caption"] as? String
+        
+        //userImage = post["userpic"] as! PFFileObject
+        
+        //converting file to image from Parse
+        let imageFile = post["image"] as! PFFileObject
+        let imageUrlString = imageFile.url!
+        let imageURL = URL(string: imageUrlString)!
+        
+        //Use alamofireimage
+        imagePost.af.setImage(withURL: imageURL)
+        
+        
+        
 //        let urlString = userImage.image!
 //        let url = URL(string: urlString)!
-//        
+        
 //        let purlString = imagePost.image!
 //        let post_url = URL(string: purlString)!
-//        
-//        imagePost.af_setImage(withURL: url)
+//
+//        //imagePost.af_setImage(withURL: url)
 //        userImage.af_setImage(withURL: post_url)
     }
     
