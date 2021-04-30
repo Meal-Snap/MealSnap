@@ -51,6 +51,12 @@ We wanted to separate the food out of all social media and have it in one social
 * [] User can comment on posts
 * [] User can search for food filters
 
+##  Video Walkthrough
+
+Here's a walkthrough of the implemented user stories:
+
+<img src='http://g.recordit.co/ISafuE71pu.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 ### 2. Screen Archetypes
 
