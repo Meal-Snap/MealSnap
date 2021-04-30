@@ -36,20 +36,21 @@ We wanted to separate the food out of all social media and have it in one social
 
 **Required Must-have Stories**
 
-* User can login
-* User can register
-* User can create posts
-    * Each post must have allergy warnings
-* User can view the feed
-* User can search for food filters
+*[x] User can login
+* [x]User can register
+* [x] User can create posts
+    *[] Each post must have allergy warnings
+* [x]User can view the feed
 
 **Optional Nice-to-have Stories**
 
-* User can view their profile
-* User can edit their profile
-* User can view specific posts
-* User can like posts
-* User can comment on posts
+* []User can view their profile
+* []User can edit their profile
+* [x]User can view specific posts
+* []User can like posts
+* []User can comment on posts
+* []User can search for food filters
+
 
 ### 2. Screen Archetypes
 
