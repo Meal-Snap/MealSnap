@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzj-Dy-Rb2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzj-Dy-Rb2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -373,7 +373,7 @@
         <!--RecipeAddViewController-->
         <scene sceneID="wRI-D4-BAf">
             <objects>
-                <viewController title="RecipeAddViewController" id="Jfq-dp-w0e" sceneMemberID="viewController">
+                <viewController title="RecipeAddViewController" id="Jfq-dp-w0e" customClass="RecipeViewController" customModule="Meal_Snap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gcq-2u-Vie">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -530,8 +530,18 @@
                     <navigationItem key="navigationItem" id="fW6-lg-207">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="y7p-bl-I6t">
                             <color key="tintColor" red="1" green="0.95067997169999996" blue="0.83510996660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="onSaveButton:" destination="Jfq-dp-w0e" id="Pkt-sU-8vV"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="foodCatagory" destination="ff9-18-U67" id="Np7-iw-ER6"/>
+                        <outlet property="foodInstructions" destination="Jct-Gz-3Hr" id="fDe-KD-4qT"/>
+                        <outlet property="ingredients" destination="kR8-aF-Ygw" id="Wcl-Pu-oBc"/>
+                        <outlet property="recipeTitle" destination="yoM-3H-aOU" id="tud-RO-fel"/>
+                        <outlet property="restrictions" destination="WRS-3A-OFr" id="f0i-wi-ERr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maM-d1-NKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
