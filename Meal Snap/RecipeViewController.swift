@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class RecipeViewController: UIViewController {
     @IBOutlet weak var recipeTitle: UITextField!
@@ -17,11 +18,32 @@ class RecipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        recipeTitle.becomeFirstResponder()
+        restrictions.becomeFirstResponder()
+        foodCatagory.becomeFirstResponder()
+        ingredients.becomeFirstResponder()
+        foodInstructions.becomeFirstResponder()
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func onSaveButton(_ sender: Any) {
+        let recipe = PFObject(className: "Recipe")
+        
+        recipe["title"] = recipeTitle.text!
+        recipe["restriction"] = restrictions.text!
+        recipe["category"] = foodCatagory.text!
+        recipe["ingredients"] = ingredients.text!
+        recipe["instructions"] = foodInstructions.text!
+        
+        recipe.saveInBackground { (success, error) in
+            if success{
+                self.dismiss(animated: true, completion: nil)
+                print("Saved!")
+            } else {
+                print("Error!")
+            }
+        }
     }
     
     /*
