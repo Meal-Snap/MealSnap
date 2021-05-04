@@ -256,7 +256,7 @@
         <!--UploadPhotoViewController-->
         <scene sceneID="GMQ-Kz-D3g">
             <objects>
-                <viewController title="UploadPhotoViewController" id="3Lz-es-DEx" customClass="UploadPhotoViewController" customModule="Meal_Snap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="UploadPhotoViewController" id="3Lz-es-DEx" customClass="PostUploadViewController" customModule="Meal_Snap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vh5-oa-67S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,30 +341,24 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Upload" id="YH4-l3-jZi">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="NDV-Zv-R70">
-                            <color key="tintColor" red="1" green="0.95067997169999996" blue="0.83510996660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <connections>
-                                <action selector="onCancelButton:" destination="3Lz-es-DEx" id="zCM-UV-R5a"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Share" id="5vC-b8-0iF">
                             <color key="tintColor" red="1" green="0.95067997169999996" blue="0.83510996660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="onShareButton:" destination="3Lz-es-DEx" id="oVi-ii-W7Q"/>
+                                <action selector="onShareButton:" destination="3Lz-es-DEx" id="urW-Ug-TnV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addRecipeButton" destination="ekB-Qz-oce" id="tXf-rK-1PK"/>
-                        <outlet property="commentField" destination="aAC-8E-FvF" id="0F8-Se-dSP"/>
-                        <outlet property="imageView" destination="YvI-os-kko" id="aOE-4j-qVy"/>
-                        <outlet property="postTitleLabel" destination="Vhf-l0-DsQ" id="8zQ-lw-kTg"/>
+                        <outlet property="addRecipeButton" destination="ekB-Qz-oce" id="3Fc-n5-JpS"/>
+                        <outlet property="captionLabel" destination="aAC-8E-FvF" id="KWi-Tc-izK"/>
+                        <outlet property="imageView" destination="YvI-os-kko" id="npS-g1-EIc"/>
+                        <outlet property="postTitle" destination="Vhf-l0-DsQ" id="bYC-NU-GBo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVg-Yx-tfi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="eqP-tC-2gS">
                     <connections>
-                        <action selector="onCameraButton:" destination="3Lz-es-DEx" id="r6p-Tg-u7h"/>
+                        <action selector="onCameraButton:" destination="3Lz-es-DEx" id="QQP-Xr-jsb"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -373,7 +367,7 @@
         <!--RecipeAddViewController-->
         <scene sceneID="wRI-D4-BAf">
             <objects>
-                <viewController title="RecipeAddViewController" id="Jfq-dp-w0e" customClass="RecipeViewController" customModule="Meal_Snap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="RecipeAddViewController" id="Jfq-dp-w0e" customClass="PostUploadViewController" customModule="Meal_Snap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gcq-2u-Vie">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -531,16 +525,16 @@
                         <barButtonItem key="rightBarButtonItem" title="Save" id="y7p-bl-I6t">
                             <color key="tintColor" red="1" green="0.95067997169999996" blue="0.83510996660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="onSaveButton:" destination="Jfq-dp-w0e" id="Pkt-sU-8vV"/>
+                                <action selector="onSaveButton:" destination="Jfq-dp-w0e" id="E32-Jk-ZcC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="foodCatagory" destination="ff9-18-U67" id="Np7-iw-ER6"/>
-                        <outlet property="foodInstructions" destination="Jct-Gz-3Hr" id="fDe-KD-4qT"/>
-                        <outlet property="ingredients" destination="kR8-aF-Ygw" id="Wcl-Pu-oBc"/>
-                        <outlet property="recipeTitle" destination="yoM-3H-aOU" id="tud-RO-fel"/>
-                        <outlet property="restrictions" destination="WRS-3A-OFr" id="f0i-wi-ERr"/>
+                        <outlet property="foodCategory" destination="ff9-18-U67" id="k1a-wA-2pZ"/>
+                        <outlet property="foodInstructions" destination="Jct-Gz-3Hr" id="5Vh-E3-fo4"/>
+                        <outlet property="ingredients" destination="kR8-aF-Ygw" id="QBq-pY-iVS"/>
+                        <outlet property="recipeTitle" destination="yoM-3H-aOU" id="hwr-fG-BpA"/>
+                        <outlet property="restrictions" destination="WRS-3A-OFr" id="VkU-Q6-DOp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maM-d1-NKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

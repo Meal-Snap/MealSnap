@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		525CD27951588B6819D037D5 /* Pods_Meal_Snap_Meal_SnapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4429E189666E1850C77F767F /* Pods_Meal_Snap_Meal_SnapUITests.framework */; };
 		58105166262A3092002A8BB7 /* UploadPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58105165262A3092002A8BB7 /* UploadPhotoViewController.swift */; };
-		58C62528263DAB41005D23CF /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C62527263DAB41005D23CF /* RecipeViewController.swift */; };
+		58AD3ED62641BA4C00C22F5C /* PostUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AD3ED52641BA4C00C22F5C /* PostUploadViewController.swift */; };
 		A3D0BF11261CC0F1001E58C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0BF10261CC0F1001E58C2 /* LoginViewController.swift */; };
 		A3D0BF16261CC126001E58C2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0BF15261CC126001E58C2 /* FeedViewController.swift */; };
 		B93EFDE02631C86F00BF7F4E /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93EFDDF2631C86F00BF7F4E /* PostCell.swift */; };
@@ -49,7 +49,7 @@
 		4429E189666E1850C77F767F /* Pods_Meal_Snap_Meal_SnapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meal_Snap_Meal_SnapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B6218F9836033B7A4A8AB9 /* Pods_Meal_SnapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meal_SnapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58105165262A3092002A8BB7 /* UploadPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoViewController.swift; sourceTree = "<group>"; };
-		58C62527263DAB41005D23CF /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		58AD3ED52641BA4C00C22F5C /* PostUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUploadViewController.swift; sourceTree = "<group>"; };
 		77351486D840BDA4BC0C1FE7 /* Pods-Meal Snap-Meal SnapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Snap-Meal SnapUITests.debug.xcconfig"; path = "Target Support Files/Pods-Meal Snap-Meal SnapUITests/Pods-Meal Snap-Meal SnapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F7A590D01B53767E5803551 /* Pods-Meal Snap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Snap.debug.xcconfig"; path = "Target Support Files/Pods-Meal Snap/Pods-Meal Snap.debug.xcconfig"; sourceTree = "<group>"; };
 		88933E815C7A5A638C5CF90B /* Pods-Meal SnapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal SnapTests.debug.xcconfig"; path = "Target Support Files/Pods-Meal SnapTests/Pods-Meal SnapTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 				E0D3EEE026160F2D004D5E66 /* Info.plist */,
 				B93EFDDF2631C86F00BF7F4E /* PostCell.swift */,
 				E0F60CC62634843B00DFE7F3 /* PostDetailsViewController.swift */,
-				58C62527263DAB41005D23CF /* RecipeViewController.swift */,
+				58AD3ED52641BA4C00C22F5C /* PostUploadViewController.swift */,
 			);
 			path = "Meal Snap";
 			sourceTree = "<group>";
@@ -425,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B93EFDE02631C86F00BF7F4E /* PostCell.swift in Sources */,
+				58AD3ED62641BA4C00C22F5C /* PostUploadViewController.swift in Sources */,
 				A3D0BF11261CC0F1001E58C2 /* LoginViewController.swift in Sources */,
 				E0D3EED726160F2D004D5E66 /* ViewController.swift in Sources */,
 				E0D3EED326160F2D004D5E66 /* AppDelegate.swift in Sources */,
@@ -432,7 +433,6 @@
 				E0F60CC72634843B00DFE7F3 /* PostDetailsViewController.swift in Sources */,
 				58105166262A3092002A8BB7 /* UploadPhotoViewController.swift in Sources */,
 				A3D0BF16261CC126001E58C2 /* FeedViewController.swift in Sources */,
-				58C62528263DAB41005D23CF /* RecipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
