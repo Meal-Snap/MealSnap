@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzj-Dy-Rb2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzj-Dy-Rb2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -283,6 +283,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title of Post..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vhf-l0-DsQ">
                                 <rect key="frame" x="20" y="481" width="373" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.95044733527317149" blue="0.90352723830320492" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="CrN-Gs-fNM"/>
                                     <constraint firstAttribute="width" constant="373" id="MNF-cR-JV8"/>
@@ -290,26 +291,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekB-Qz-oce">
-                                <rect key="frame" x="19" y="539" width="374" height="36"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="Ry6-JR-Shu"/>
-                                    <constraint firstAttribute="width" constant="374" id="qUP-0d-aQG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="tintColor" red="0.85031329310000003" green="0.61758976080000005" blue="0.3607224443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Add Recipe">
-                                    <color key="titleColor" red="1" green="0.52141812480000005" blue="0.1679388127" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <color key="titleShadowColor" red="0.68504124369999997" green="0.39013406760000002" blue="0.25634049149999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Jfq-dp-w0e" kind="show" id="6vP-1H-QuW"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Caption.." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aAC-8E-FvF">
-                                <rect key="frame" x="20" y="597" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Description.." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aAC-8E-FvF">
+                                <rect key="frame" x="19" y="554" width="374" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.95044733530000003" blue="0.90352723830000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="6NA-FP-Uev"/>
                                     <constraint firstAttribute="width" constant="374" id="Aop-0d-LiA"/>
@@ -323,33 +307,30 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="AccentColor"/>
                         <constraints>
-                            <constraint firstItem="ekB-Qz-oce" firstAttribute="top" secondItem="Vhf-l0-DsQ" secondAttribute="bottom" constant="22" id="4Ma-2i-UQZ"/>
-                            <constraint firstItem="oYh-Xd-2hl" firstAttribute="bottom" secondItem="aAC-8E-FvF" secondAttribute="bottom" constant="182" id="5TN-lS-cuU"/>
-                            <constraint firstItem="oYh-Xd-2hl" firstAttribute="trailing" secondItem="YvI-os-kko" secondAttribute="trailing" constant="20" id="7A4-f8-FSQ"/>
-                            <constraint firstItem="YvI-os-kko" firstAttribute="leading" secondItem="oYh-Xd-2hl" secondAttribute="leading" constant="20" id="Beh-Cg-c5U"/>
-                            <constraint firstItem="oYh-Xd-2hl" firstAttribute="trailing" secondItem="ekB-Qz-oce" secondAttribute="trailing" constant="21" id="IL6-eO-EJ2"/>
-                            <constraint firstItem="aAC-8E-FvF" firstAttribute="leading" secondItem="oYh-Xd-2hl" secondAttribute="leading" constant="20" id="N24-QK-gYn"/>
-                            <constraint firstItem="aAC-8E-FvF" firstAttribute="top" secondItem="ekB-Qz-oce" secondAttribute="bottom" constant="22" id="PF6-iB-dMu"/>
-                            <constraint firstItem="oYh-Xd-2hl" firstAttribute="trailing" secondItem="aAC-8E-FvF" secondAttribute="trailing" constant="20" id="TvL-88-Hwh"/>
-                            <constraint firstItem="ekB-Qz-oce" firstAttribute="top" secondItem="Vhf-l0-DsQ" secondAttribute="bottom" constant="22" id="eIh-6h-2Ch"/>
-                            <constraint firstItem="Vhf-l0-DsQ" firstAttribute="top" secondItem="YvI-os-kko" secondAttribute="bottom" constant="17" id="hm3-AO-ZMs"/>
-                            <constraint firstItem="oYh-Xd-2hl" firstAttribute="trailing" secondItem="Vhf-l0-DsQ" secondAttribute="trailing" constant="21" id="hzz-dM-yIZ"/>
-                            <constraint firstItem="Vhf-l0-DsQ" firstAttribute="leading" secondItem="oYh-Xd-2hl" secondAttribute="leading" constant="20" id="q2F-yL-UCI"/>
-                            <constraint firstItem="YvI-os-kko" firstAttribute="top" secondItem="oYh-Xd-2hl" secondAttribute="top" id="rfv-TH-cAr"/>
-                            <constraint firstItem="Vhf-l0-DsQ" firstAttribute="top" secondItem="YvI-os-kko" secondAttribute="bottom" constant="17" id="uhf-7F-Ppa"/>
-                            <constraint firstItem="ekB-Qz-oce" firstAttribute="leading" secondItem="oYh-Xd-2hl" secondAttribute="leading" constant="19" id="yY0-9n-e1l"/>
+                            <constraint firstItem="aAC-8E-FvF" firstAttribute="leading" secondItem="oYh-Xd-2hl" secondAttribute="leading" constant="19" id="6uF-Si-NSE"/>
+                            <constraint firstItem="YvI-os-kko" firstAttribute="leading" secondItem="oYh-Xd-2hl" secondAttribute="leading" constant="20" id="FDf-3H-sTE"/>
+                            <constraint firstItem="YvI-os-kko" firstAttribute="top" secondItem="oYh-Xd-2hl" secondAttribute="top" id="Zs2-he-MLY"/>
+                            <constraint firstItem="Vhf-l0-DsQ" firstAttribute="leading" secondItem="oYh-Xd-2hl" secondAttribute="leading" constant="20" id="Zvl-UE-fGx"/>
+                            <constraint firstItem="oYh-Xd-2hl" firstAttribute="trailing" secondItem="Vhf-l0-DsQ" secondAttribute="trailing" constant="21" id="djK-UZ-Od0"/>
+                            <constraint firstItem="aAC-8E-FvF" firstAttribute="top" secondItem="Vhf-l0-DsQ" secondAttribute="bottom" constant="37" id="feK-7x-HuX"/>
+                            <constraint firstItem="Vhf-l0-DsQ" firstAttribute="top" secondItem="YvI-os-kko" secondAttribute="bottom" constant="17" id="hlP-pb-ZH1"/>
+                            <constraint firstItem="aAC-8E-FvF" firstAttribute="top" secondItem="Vhf-l0-DsQ" secondAttribute="bottom" constant="37" id="kge-uq-lr0"/>
+                            <constraint firstItem="oYh-Xd-2hl" firstAttribute="bottom" secondItem="aAC-8E-FvF" secondAttribute="bottom" constant="225" id="mun-Nd-qCH"/>
+                            <constraint firstItem="Vhf-l0-DsQ" firstAttribute="top" secondItem="YvI-os-kko" secondAttribute="bottom" constant="17" id="rPY-gY-ZCn"/>
+                            <constraint firstItem="oYh-Xd-2hl" firstAttribute="trailing" secondItem="aAC-8E-FvF" secondAttribute="trailing" constant="21" id="tr6-c7-CdY"/>
+                            <constraint firstItem="oYh-Xd-2hl" firstAttribute="trailing" secondItem="YvI-os-kko" secondAttribute="trailing" constant="20" id="vSZ-26-P0K"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Upload" id="YH4-l3-jZi">
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="5vC-b8-0iF">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="5vC-b8-0iF">
                             <color key="tintColor" red="1" green="0.95067997169999996" blue="0.83510996660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <action selector="onShareButton:" destination="3Lz-es-DEx" id="urW-Ug-TnV"/>
+                                <action selector="onNextButton:" destination="3Lz-es-DEx" id="wf7-oF-qhR"/>
+                                <segue destination="Jfq-dp-w0e" kind="push" id="Hk3-aw-F1o"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addRecipeButton" destination="ekB-Qz-oce" id="3Fc-n5-JpS"/>
                         <outlet property="captionLabel" destination="aAC-8E-FvF" id="KWi-Tc-izK"/>
                         <outlet property="imageView" destination="YvI-os-kko" id="npS-g1-EIc"/>
                         <outlet property="postTitle" destination="Vhf-l0-DsQ" id="bYC-NU-GBo"/>
@@ -362,7 +343,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3200" y="723"/>
+            <point key="canvasLocation" x="3200.0000000000005" y="722.54464285714278"/>
         </scene>
         <!--RecipeAddViewController-->
         <scene sceneID="wRI-D4-BAf">
@@ -422,7 +403,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="- 1 Cup Chicken Broth                                                           - 1 Small Onion .... etc" translatesAutoresizingMaskIntoConstraints="NO" id="kR8-aF-Ygw">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="- 1 Cup Chicken Broth                                                          " translatesAutoresizingMaskIntoConstraints="NO" id="kR8-aF-Ygw">
                                 <rect key="frame" x="20" y="391" width="374" height="141"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
@@ -522,7 +503,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fW6-lg-207">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="y7p-bl-I6t">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="y7p-bl-I6t">
                             <color key="tintColor" red="1" green="0.95067997169999996" blue="0.83510996660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="onSaveButton:" destination="Jfq-dp-w0e" id="E32-Jk-ZcC"/>
@@ -539,7 +520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maM-d1-NKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3885.507246376812" y="722.54464285714278"/>
+            <point key="canvasLocation" x="3938" y="723"/>
         </scene>
         <!--ProfileViewController-->
         <scene sceneID="m0N-fA-cj5">
@@ -1036,9 +1017,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

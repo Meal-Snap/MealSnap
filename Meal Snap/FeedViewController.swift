@@ -30,7 +30,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
             super.viewDidAppear(animated)
 
             //here I will make the query
-            let query = PFQuery(className: "Posts")
+            let query = PFQuery(className: "Recipe")
             query.includeKeys(["author"])
             query.limit = 20 //get the last 20
 
@@ -61,16 +61,16 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
 
         let post = posts[indexPath.item]
 
-        let user = post["author"] as! PFUser
-        cell.PostUsername.text = user.username
-
-        let imageFile = post["image"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
-
-//                remember the ?? are about optionals!
-        cell.FoodImageCell.af_setImage(withURL: url)
-    
+        if let user = post["author"] as? PFUser{
+            cell.PostUsername.text = user.username
+        }
+        
+        if let imageFile = post["image"] as? PFFileObject {
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+        
+            cell.FoodImageCell.af_setImage(withURL: url)
+        }
         return cell
     }
     

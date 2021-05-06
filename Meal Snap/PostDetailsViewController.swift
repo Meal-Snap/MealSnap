@@ -31,12 +31,13 @@ class PostDetailsViewController: UIViewController {
         //userImage = post["userpic"] as! PFFileObject
         
         //converting file to image from Parse
-        let imageFile = post["image"] as! PFFileObject
-        let imageUrlString = imageFile.url!
-        let imageURL = URL(string: imageUrlString)!
-        
-        //Use alamofireimage
-        imagePost.af.setImage(withURL: imageURL)
+        if let imageFile = post["image"] as? PFFileObject{
+            let imageUrlString = imageFile.url!
+            let imageURL = URL(string: imageUrlString)!
+            
+            //Use alamofireimage
+            imagePost.af.setImage(withURL: imageURL)
+        }
         
         
         

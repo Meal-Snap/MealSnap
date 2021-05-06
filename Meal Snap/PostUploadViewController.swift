@@ -34,11 +34,11 @@ class PostUploadViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        recipeTitle.becomeFirstResponder()
-        restrictions.becomeFirstResponder()
-        foodCategory.becomeFirstResponder()
-        ingredients.becomeFirstResponder()
-        foodInstructions.becomeFirstResponder()
+//        recipeTitle.becomeFirstResponder()
+//        restrictions.becomeFirstResponder()
+//        foodCategory.becomeFirstResponder()
+//        ingredients.becomeFirstResponder()
+//        foodInstructions.becomeFirstResponder()
 
         // Do any additional setup after loading the view.
     }
@@ -69,19 +69,48 @@ class PostUploadViewController: UIViewController, UIImagePickerControllerDelegat
         dismiss(animated: true, completion: nil)
     }
     
+    let post = PFObject(className: "Recipe")
+    let defaults = UserDefaults.standard
+
+//    var userInputPostTitle: String!
+//    var userInputDescription: String!
+//    var file: PFFileObject!
     
-    @IBAction func onShareButton(_ sender: Any) {
-        let post = PFObject(className: "Recipe")
+
+//    @IBAction func onShareButton(_ sender: Any) {
         
-        post["postTitle"] = postTitle.text!
-        post["caption"] = captionLabel.text!
+    @IBAction func onNextButton(_ sender: Any) {
+        //save the user inputs here to a string
+        
+        if( (postTitle.text?.count)! > 0 && (captionLabel.text?.count)! > 0 ){
+            defaults.set(postTitle.text!, forKey: "userInputPostTitle")
+            defaults.set(captionLabel.text!, forKey: "userInputDescription")
+            if let imageFile = imageView.image!.pngData() {
+                let file = PFFileObject(data: imageFile)
+                defaults.set(file, forKey: "image")
+            }
+        }
+    }
+    
+    
+    // save user's PostTitle AND Caption to a string....
+    // User clicks NEXT -> Next takes to recipe page
+    
+    @IBAction func onSaveButton(_ sender: Any) {
+       // let recipe = PFObject(className: "Recipe")
+        
         post["author"] = PFUser.current()!
         
-        let imageData = imageView.image!.pngData()
-        let file = PFFileObject(data: imageData!)
+        post["postTitle"] = defaults.string(forKey: "userInputPostTitle")
+        post["caption"] = defaults.string(forKey: "userInputDescription")
+        post["image"] = defaults.data(forKey: "image")
         
-        post["image"] = file
-        
+        post["recipeTitle"] = recipeTitle.text!
+        post["restriction"] = restrictions.text!
+        post["category"] = foodCategory.text!
+        post["ingredients"] = ingredients.text!
+        post["instructions"] = foodInstructions.text!
+                
         post.saveInBackground { (success, error) in
             if success{
                 self.dismiss(animated: true, completion: nil)
@@ -92,24 +121,6 @@ class PostUploadViewController: UIViewController, UIImagePickerControllerDelegat
         }
     }
     
-    @IBAction func onSaveButton(_ sender: Any) {
-        let recipe = PFObject(className: "Recipe")
-        
-        recipe["recipeTitle"] = recipeTitle.text!
-        recipe["restriction"] = restrictions.text!
-        recipe["category"] = foodCategory.text!
-        recipe["ingredients"] = ingredients.text!
-        recipe["instructions"] = foodInstructions.text!
-        
-        recipe.saveInBackground { (success, error) in
-            if success{
-                self.dismiss(animated: true, completion: nil)
-                print("Saved!")
-            } else {
-                print("Error!")
-            }
-        }
-    }
     
 
     /*
