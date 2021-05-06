@@ -23,6 +23,14 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         // Do any additional setup after loading the view.
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 2
+        layout.minimumInteritemSpacing = 2
+        
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing*2) / 3
+        layout.itemSize = CGSize(width: width, height: width*1.1)
 
     }
     
