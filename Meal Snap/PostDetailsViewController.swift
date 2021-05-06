@@ -35,31 +35,16 @@ class PostDetailsViewController: UIViewController {
             let imageUrlString = imageFile.url!
             let imageURL = URL(string: imageUrlString)!
             
-            //Use alamofireimage
+            //Use alamofireimage for user profile pic
             imagePost.af.setImage(withURL: imageURL)
         }
+        if let userimageFile = post["userpic"] as? PFFileObject{
+            let userimageUrlString = userimageFile.url!
+            let userimageURL = URL(string: userimageUrlString)!
+            
+            //Use alamofireimage for user profile pic
+            userImage.af.setImage(withURL: userimageURL)
+        }
         
-        
-        
-//        let urlString = userImage.image!
-//        let url = URL(string: urlString)!
-        
-//        let purlString = imagePost.image!
-//        let post_url = URL(string: purlString)!
-//
-//        //imagePost.af_setImage(withURL: url)
-//        userImage.af_setImage(withURL: post_url)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

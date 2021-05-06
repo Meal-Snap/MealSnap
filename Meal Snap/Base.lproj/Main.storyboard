@@ -168,21 +168,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a0S-xm-d6o">
-                                    <size key="itemSize" width="150" height="156"/>
+                                    <size key="itemSize" width="140" height="154"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="a8x-sT-O5R" customClass="PostCell" customModule="Meal_Snap" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="156"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="154"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="c8F-ty-Tv5">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="156"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="154"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sparkles" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0ok-mz-MJW">
-                                                    <rect key="frame" x="1" y="-1" width="150" height="157"/>
+                                                    <rect key="frame" x="1" y="-1" width="139" height="155"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="0.90013286660000003" blue="0.65578312540000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="tintColor" red="1" green="0.60716694770000001" blue="0.43241996199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -199,7 +199,7 @@
                                                 </label>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="150" height="156"/>
+                                        <size key="customSize" width="140" height="154"/>
                                         <connections>
                                             <outlet property="FoodImageCell" destination="0ok-mz-MJW" id="en3-JQ-yR1"/>
                                             <outlet property="PostUsername" destination="LWm-sc-i9d" id="Opr-rg-T58"/>
@@ -525,7 +525,7 @@
         <!--ProfileViewController-->
         <scene sceneID="m0N-fA-cj5">
             <objects>
-                <viewController title="ProfileViewController" id="LPl-ng-aP3" sceneMemberID="viewController">
+                <viewController title="ProfileViewController" id="LPl-ng-aP3" customClass="ProfileViewController" customModule="Meal_Snap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TCg-Wb-HmD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -550,8 +550,8 @@
                                 <color key="textColor" red="0.7426633883" green="0.35221799310000002" blue="0.019676701210000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#mediterranean #vegan #gluten-free #nopeanuts" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vi-Dz-Ywd">
-                                <rect key="frame" x="20" y="519" width="374" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="---" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vi-Dz-Ywd">
+                                <rect key="frame" x="196" y="519" width="23" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -561,7 +561,7 @@
                                 <rect key="frame" x="20" y="609" width="374" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="I am a Computer Science Student @Hunter CUNY and I like to eat vegan foods.">
+                                    <fragment content="---">
                                         <attributes>
                                             <color key="NSColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <font key="NSFont" metaFont="system" size="17"/>
@@ -591,21 +591,27 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bio" destination="g9p-7V-d4v" id="WT3-fZ-B11"/>
+                        <outlet property="preference" destination="1Vi-Dz-Ywd" id="XMs-gy-GU2"/>
+                        <outlet property="usernameLabel" destination="gQV-ux-ZT3" id="c55-2T-84y"/>
+                        <outlet property="userpic" destination="NBW-qh-la8" id="JuJ-de-zem"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mgo-nB-Dky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3463.7681159420295" y="-6.0267857142857144"/>
         </scene>
-        <!--Settings-->
+        <!--SettingsViewController-->
         <scene sceneID="1IV-bz-cmg">
             <objects>
-                <viewController id="bSg-d5-3Ck" sceneMemberID="viewController">
+                <viewController title="SettingsViewController" id="bSg-d5-3Ck" customClass="SettingsViewController" customModule="Meal_Snap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N88-Pg-RtT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Edit Bio Here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MUK-Wj-rUA">
-                                <rect key="frame" x="20" y="480" width="374" height="316"/>
+                                <rect key="frame" x="20" y="593" width="374" height="203"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -613,33 +619,26 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ker-Sd-Kd3">
-                                <rect key="frame" x="20" y="431" width="374" height="41"/>
+                                <rect key="frame" x="20" y="544" width="374" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.60716694770000001" blue="0.43241996199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Change Preferences" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sIK-za-SWR">
-                                <rect key="frame" x="20" y="369" width="374" height="34"/>
+                                <rect key="frame" x="20" y="491" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change Preferences" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqs-ae-5yo">
-                                <rect key="frame" x="20" y="320" width="374" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change Food Preferences" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqs-ae-5yo">
+                                <rect key="frame" x="20" y="442" width="374" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.60716694770000001" blue="0.43241996199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Change Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bAI-PR-TT4">
-                                <rect key="frame" x="20" y="257" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="P7M-yJ-Uel">
                                 <rect key="frame" x="20" y="146" width="374" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -650,12 +649,26 @@
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="1" green="0.9179395877303127" blue="0.81112579229177417" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gul-hp-gJK">
-                                <rect key="frame" x="20" y="208" width="374" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBQ-15-WdS">
+                                <rect key="frame" x="86" y="185" width="243" height="235"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.60716694770000001" blue="0.43241996199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="person.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="onProfileButton:" destination="bSg-d5-3Ck" eventType="touchUpInside" id="pt7-Ou-egz"/>
+                                </connections>
+                            </button>
+                            <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change Profile Pic" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZI-r8-ze6">
+                                <rect key="frame" x="86" y="401" width="131" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.2849381345" green="0.17300501739999999" blue="0.12321293730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nY8-gb-9Pf"/>
@@ -664,17 +677,25 @@
                     <navigationItem key="navigationItem" title="Settings" id="qnP-rO-M6h">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="pc7-mM-P6H">
                             <color key="tintColor" red="1" green="0.95067997169999996" blue="0.83510996660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="onSaveButton:" destination="bSg-d5-3Ck" id="5H8-hR-SoZ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bioChange" destination="MUK-Wj-rUA" id="Js5-OX-toN"/>
+                        <outlet property="preferencesChange" destination="sIK-za-SWR" id="X0n-1i-Yc4"/>
+                        <outlet property="profilePic" destination="pBQ-15-WdS" id="WYX-L6-1P0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1x-03-y62" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4286.9565217391309" y="-6.0267857142857144"/>
         </scene>
-        <!--RecipeViewController-->
+        <!--RecipeDetailsViewController-->
         <scene sceneID="a43-DT-vQl">
             <objects>
-                <viewController title="RecipeViewController" id="J4s-Vg-kW0" sceneMemberID="viewController">
+                <viewController title="RecipeDetailsViewController" id="J4s-Vg-kW0" customClass="RecipeDetailsViewController" customModule="Meal_Snap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wVW-nu-kbI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -808,6 +829,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sel-Rt-LpL"/>
+                    <connections>
+                        <outlet property="foodCategory" destination="GmC-vp-qUR" id="5Zx-md-5XY"/>
+                        <outlet property="foodRestrictions" destination="wdf-Ei-d1q" id="xHh-h5-ZXY"/>
+                        <outlet property="ingredients" destination="CvY-TW-Kyu" id="igt-FX-LEc"/>
+                        <outlet property="instructions" destination="fMN-w7-XD8" id="01m-AL-uhP"/>
+                        <outlet property="recipeTitle" destination="eFk-XP-Ktt" id="nmB-zf-at8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXU-YC-NUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

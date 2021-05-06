@@ -62,7 +62,7 @@ class PostUploadViewController: UIViewController, UIImagePickerControllerDelegat
         let image = info[.editedImage] as! UIImage
         
         let size = CGSize(width: 300, height: 300)
-        let scaledImage = image.af_imageScaled(to: size)
+        let scaledImage = image.af.imageScaled(to: size)
         
         imageView.image = scaledImage
         
@@ -71,25 +71,20 @@ class PostUploadViewController: UIViewController, UIImagePickerControllerDelegat
     
     let post = PFObject(className: "Recipe")
     let defaults = UserDefaults.standard
-
-//    var userInputPostTitle: String!
-//    var userInputDescription: String!
-//    var file: PFFileObject!
     
 
 //    @IBAction func onShareButton(_ sender: Any) {
         
     @IBAction func onNextButton(_ sender: Any) {
         //save the user inputs here to a string
-        
-        if( (postTitle.text?.count)! > 0 && (captionLabel.text?.count)! > 0 ){
-            defaults.set(postTitle.text!, forKey: "userInputPostTitle")
-            defaults.set(captionLabel.text!, forKey: "userInputDescription")
-            if let imageFile = imageView.image!.pngData() {
-                let file = PFFileObject(data: imageFile)
-                defaults.set(file, forKey: "image")
-            }
-        }
+        defaults.setValue(postTitle.text!, forKey: "userInputPostTitle")
+        defaults.setValue(captionLabel.text!, forKey: "userInputDescription")
+        let imageFile = imageView.image!.pngData()
+        let file = PFFileObject(data: imageFile!)
+        defaults.setValue(file, forKey: "image")
+        defaults.synchronize()
+
+        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -97,13 +92,18 @@ class PostUploadViewController: UIViewController, UIImagePickerControllerDelegat
     // User clicks NEXT -> Next takes to recipe page
     
     @IBAction func onSaveButton(_ sender: Any) {
-       // let recipe = PFObject(className: "Recipe")
         
         post["author"] = PFUser.current()!
         
-        post["postTitle"] = defaults.string(forKey: "userInputPostTitle")
-        post["caption"] = defaults.string(forKey: "userInputDescription")
-        post["image"] = defaults.data(forKey: "image")
+        if(defaults.string(forKey: "userInputPostTitle") != nil) {
+            post["postTitle"] = defaults.string(forKey: "userInputPostTitle")
+        }
+        if(defaults.string(forKey: "userInputDescription") != nil) {
+            post["caption"] = defaults.string(forKey: "userInputDescription")
+        }
+        if(defaults.data(forKey: "image") != nil) {
+            post["image"] = defaults.data(forKey: "image")
+        }
         
         post["recipeTitle"] = recipeTitle.text!
         post["restriction"] = restrictions.text!
@@ -113,6 +113,9 @@ class PostUploadViewController: UIViewController, UIImagePickerControllerDelegat
                 
         post.saveInBackground { (success, error) in
             if success{
+                self.defaults.removeObject(forKey: "userInputPostTitle")
+                self.defaults.removeObject(forKey: "userInputDescription")
+                self.defaults.removeObject(forKey: "image")
                 self.dismiss(animated: true, completion: nil)
                 print("Saved!")
             } else {
