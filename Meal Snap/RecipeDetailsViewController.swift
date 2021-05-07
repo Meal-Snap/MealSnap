@@ -16,7 +16,9 @@ class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var ingredients: UILabel!
     @IBOutlet weak var instructions: UILabel!
     
-    var recipe: PFObject!
+    var recipe = PFObject(className: "Recipe")
+    //var user = PFUser()
+    //var recipe = PFObject!
 
     override func viewDidLoad() {
         super.viewDidLoad()

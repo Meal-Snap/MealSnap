@@ -39,7 +39,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
 
             //here I will make the query
             let query = PFQuery(className: "Recipe")
-            query.includeKeys(["author"])
+            query.includeKeys(["author.username"])
             query.limit = 20 //get the last 20
 
             query.findObjectsInBackground { (posts, error) in
@@ -98,6 +98,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         //Task 2 - Store posts into details controller
         let detailsViewController = segue.destination as! PostDetailsViewController
         detailsViewController.post = post
+        detailsViewController.user = post["author"] as! PFUser
 
         //while transitioning, this disables the highlighted feature of each cell that was selected
         collectionView.deselectItem(at: indexPath, animated: true)

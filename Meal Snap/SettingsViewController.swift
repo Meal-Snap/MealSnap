@@ -11,7 +11,6 @@ import Parse
 class SettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var profilePic: UIImageView!
-    @IBOutlet weak var usernameChange: UITextField!
     @IBOutlet weak var preferencesChange: UITextField!
     @IBOutlet weak var bioChange: UITextView!
     
@@ -21,7 +20,8 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         super.viewDidLoad()
     }
     
-    @IBAction func onProfileButton(_ sender: Any) {
+
+    @IBAction func onProfilePic(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
