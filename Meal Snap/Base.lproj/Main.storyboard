@@ -702,135 +702,136 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Recipe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFk-XP-Ktt">
-                                <rect key="frame" x="20" y="88" width="374" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="KgV-d2-8X9"/>
-                                    <constraint firstAttribute="height" constant="67" id="b4J-Zi-PbV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" red="0.93759914339999995" green="0.49113347190000001" blue="0.16458372539999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Restrictions" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mS7-wm-FIB">
-                                <rect key="frame" x="20" y="170" width="374" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Restrictions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mS7-wm-FIB">
+                                <rect key="frame" x="20" y="213" width="374" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="6cI-y6-LQP"/>
                                     <constraint firstAttribute="height" constant="31" id="bkk-Ok-lCW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.2849381345" green="0.17300501739999999" blue="0.12321293730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Category" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMz-30-5rf">
-                                <rect key="frame" x="20" y="263" width="374" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMz-30-5rf">
+                                <rect key="frame" x="20" y="310" width="374" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="g7k-tC-c6L"/>
                                     <constraint firstAttribute="height" constant="24" id="p4c-3x-Cnl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.2849381345" green="0.17300501739999999" blue="0.12321293730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of Food Category" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmC-vp-qUR">
-                                <rect key="frame" x="20" y="290" width="374" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of Food Category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmC-vp-qUR">
+                                <rect key="frame" x="20" y="342" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="NfB-ju-73r"/>
                                     <constraint firstAttribute="width" constant="374" id="WEE-du-dDX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients Text Field" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvY-TW-Kyu">
-                                <rect key="frame" x="20" y="398" width="374" height="137"/>
+                                <rect key="frame" x="20" y="475" width="374" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="137" id="0IT-Gi-192"/>
                                     <constraint firstAttribute="width" constant="374" id="ffu-g4-UmK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of Food Restrictions" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdf-Ei-d1q">
-                                <rect key="frame" x="20" y="203" width="374" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of Food Restrictions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdf-Ei-d1q">
+                                <rect key="frame" x="20" y="252" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QYc-m5-ixB"/>
                                     <constraint firstAttribute="width" constant="374" id="ZYh-kz-xqE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFZ-7n-Pe2">
-                                <rect key="frame" x="20" y="355" width="374" height="39"/>
+                                <rect key="frame" x="20" y="428" width="374" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="Wpj-lU-ap3"/>
                                     <constraint firstAttribute="height" constant="39" id="oSv-g6-cha"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="0.2849381345" green="0.17300501739999999" blue="0.12321293730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qT-Hw-n0t">
-                                <rect key="frame" x="20" y="549" width="374" height="39"/>
+                                <rect key="frame" x="20" y="620" width="374" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="qh9-rz-Gth"/>
                                     <constraint firstAttribute="width" constant="374" id="ygV-kC-GUt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="0.2849381345" green="0.17300501739999999" blue="0.12321293730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Directions Text Field" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMN-w7-XD8">
-                                <rect key="frame" x="20" y="596" width="374" height="217"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Directions Text Field" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMN-w7-XD8">
+                                <rect key="frame" x="20" y="667" width="374" height="146"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="NlJ-et-HdC"/>
-                                    <constraint firstAttribute="height" constant="217" id="VDA-xo-mnn"/>
+                                    <constraint firstAttribute="height" constant="146" id="myt-Sz-E4M"/>
+                                    <constraint firstAttribute="width" constant="374" id="ujJ-dm-kWi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Recipe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFk-XP-Ktt">
+                                <rect key="frame" x="20" y="119" width="374" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="Qci-KV-8HW"/>
+                                    <constraint firstAttribute="width" constant="374" id="zrv-tP-CDw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.93759914339999995" green="0.49113347190000001" blue="0.16458372539999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KRW-hu-fe8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GmC-vp-qUR" firstAttribute="top" secondItem="iMz-30-5rf" secondAttribute="bottom" constant="3" id="04p-Se-5LT"/>
-                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="eFk-XP-Ktt" secondAttribute="trailing" constant="20" id="0xN-VH-inj"/>
-                            <constraint firstItem="GmC-vp-qUR" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="1L0-Mh-sp4"/>
-                            <constraint firstItem="XFZ-7n-Pe2" firstAttribute="top" secondItem="GmC-vp-qUR" secondAttribute="bottom" constant="15" id="1wg-z9-yZ9"/>
-                            <constraint firstItem="CvY-TW-Kyu" firstAttribute="top" secondItem="XFZ-7n-Pe2" secondAttribute="bottom" constant="4" id="3nQ-gO-LQ6"/>
-                            <constraint firstItem="wdf-Ei-d1q" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="4Zw-a2-P4T"/>
-                            <constraint firstItem="wdf-Ei-d1q" firstAttribute="top" secondItem="mS7-wm-FIB" secondAttribute="bottom" constant="2" id="4ry-F4-HaW"/>
-                            <constraint firstItem="fMN-w7-XD8" firstAttribute="bottom" secondItem="KRW-hu-fe8" secondAttribute="bottom" id="5a7-IG-xXb"/>
-                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="XFZ-7n-Pe2" secondAttribute="trailing" constant="20" id="74u-pU-pYR"/>
-                            <constraint firstItem="6qT-Hw-n0t" firstAttribute="top" secondItem="CvY-TW-Kyu" secondAttribute="bottom" constant="14" id="7qx-fI-i51"/>
-                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="CvY-TW-Kyu" secondAttribute="trailing" constant="20" id="BrE-rb-ldb"/>
-                            <constraint firstItem="iMz-30-5rf" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="CBU-nd-mGo"/>
-                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="iMz-30-5rf" secondAttribute="trailing" constant="20" id="FKT-ji-NEj"/>
-                            <constraint firstItem="eFk-XP-Ktt" firstAttribute="top" secondItem="KRW-hu-fe8" secondAttribute="top" id="GAQ-e8-UGE"/>
-                            <constraint firstItem="CvY-TW-Kyu" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="M6l-ek-2vo"/>
-                            <constraint firstItem="wdf-Ei-d1q" firstAttribute="top" secondItem="mS7-wm-FIB" secondAttribute="bottom" constant="2" id="Q8R-Ne-qFS"/>
-                            <constraint firstItem="mS7-wm-FIB" firstAttribute="top" secondItem="eFk-XP-Ktt" secondAttribute="bottom" constant="15" id="SoX-l2-em7"/>
-                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="mS7-wm-FIB" secondAttribute="trailing" constant="20" id="Tdv-Mp-yyk"/>
-                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="fMN-w7-XD8" secondAttribute="trailing" constant="20" id="Wpm-Wx-p0t"/>
-                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="GmC-vp-qUR" secondAttribute="trailing" constant="20" id="Wus-mX-T3G"/>
-                            <constraint firstItem="iMz-30-5rf" firstAttribute="top" secondItem="wdf-Ei-d1q" secondAttribute="bottom" constant="10" id="Yok-r9-Eq6"/>
-                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="6qT-Hw-n0t" secondAttribute="trailing" constant="20" id="a4y-Ff-8HA"/>
-                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="wdf-Ei-d1q" secondAttribute="trailing" constant="20" id="aGF-Ee-mmg"/>
-                            <constraint firstItem="6qT-Hw-n0t" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="czK-8i-xUM"/>
-                            <constraint firstItem="fMN-w7-XD8" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="dFB-Tb-m2A"/>
-                            <constraint firstItem="GmC-vp-qUR" firstAttribute="top" secondItem="iMz-30-5rf" secondAttribute="bottom" constant="3" id="fBT-Ne-76G"/>
-                            <constraint firstItem="fMN-w7-XD8" firstAttribute="top" secondItem="6qT-Hw-n0t" secondAttribute="bottom" constant="8" symbolic="YES" id="fpB-VQ-C2H"/>
-                            <constraint firstItem="eFk-XP-Ktt" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="gj0-go-4N8"/>
-                            <constraint firstItem="mS7-wm-FIB" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="hRi-GK-vAL"/>
-                            <constraint firstItem="XFZ-7n-Pe2" firstAttribute="top" secondItem="GmC-vp-qUR" secondAttribute="bottom" constant="15" id="iBe-5A-T7E"/>
-                            <constraint firstItem="CvY-TW-Kyu" firstAttribute="top" secondItem="XFZ-7n-Pe2" secondAttribute="bottom" constant="4" id="oBg-zG-mrH"/>
-                            <constraint firstItem="mS7-wm-FIB" firstAttribute="top" secondItem="eFk-XP-Ktt" secondAttribute="bottom" constant="15" id="qxw-Gu-uuH"/>
-                            <constraint firstItem="6qT-Hw-n0t" firstAttribute="top" secondItem="CvY-TW-Kyu" secondAttribute="bottom" constant="14" id="r3j-Sb-AQ6"/>
-                            <constraint firstItem="fMN-w7-XD8" firstAttribute="top" secondItem="6qT-Hw-n0t" secondAttribute="bottom" constant="8" symbolic="YES" id="w4I-ez-Z4w"/>
-                            <constraint firstItem="XFZ-7n-Pe2" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="xn2-Sk-AIF"/>
+                            <constraint firstItem="iMz-30-5rf" firstAttribute="top" secondItem="wdf-Ei-d1q" secondAttribute="bottom" constant="8" symbolic="YES" id="0Ab-9g-p1Y"/>
+                            <constraint firstItem="fMN-w7-XD8" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="9Z6-II-dy2"/>
+                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="XFZ-7n-Pe2" secondAttribute="trailing" constant="20" id="9tl-hI-fE0"/>
+                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="CvY-TW-Kyu" secondAttribute="trailing" constant="20" id="AYS-NB-ahF"/>
+                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="wdf-Ei-d1q" secondAttribute="trailing" constant="20" id="B7C-Ji-Iej"/>
+                            <constraint firstItem="eFk-XP-Ktt" firstAttribute="top" secondItem="KRW-hu-fe8" secondAttribute="top" constant="31" id="Ft4-nD-SCG"/>
+                            <constraint firstItem="mS7-wm-FIB" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="G4n-mH-vpt"/>
+                            <constraint firstItem="6qT-Hw-n0t" firstAttribute="top" secondItem="CvY-TW-Kyu" secondAttribute="bottom" constant="8" symbolic="YES" id="I05-XD-LiM"/>
+                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="6qT-Hw-n0t" secondAttribute="trailing" constant="20" id="KR4-Th-Kfz"/>
+                            <constraint firstItem="mS7-wm-FIB" firstAttribute="top" secondItem="eFk-XP-Ktt" secondAttribute="bottom" constant="8" symbolic="YES" id="N57-6h-s1O"/>
+                            <constraint firstItem="XFZ-7n-Pe2" firstAttribute="top" secondItem="GmC-vp-qUR" secondAttribute="bottom" constant="36" id="Na6-9n-Eb4"/>
+                            <constraint firstItem="GmC-vp-qUR" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="NnF-5F-1Qc"/>
+                            <constraint firstItem="eFk-XP-Ktt" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="PO5-DC-ksc"/>
+                            <constraint firstItem="GmC-vp-qUR" firstAttribute="top" secondItem="iMz-30-5rf" secondAttribute="bottom" constant="8" symbolic="YES" id="Q4F-lK-DiC"/>
+                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="iMz-30-5rf" secondAttribute="trailing" constant="20" id="SdQ-11-adR"/>
+                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="6qT-Hw-n0t" secondAttribute="trailing" constant="20" id="Vc4-x7-hy5"/>
+                            <constraint firstItem="CvY-TW-Kyu" firstAttribute="top" secondItem="XFZ-7n-Pe2" secondAttribute="bottom" constant="8" symbolic="YES" id="ZY4-6T-sg2"/>
+                            <constraint firstItem="wdf-Ei-d1q" firstAttribute="top" secondItem="mS7-wm-FIB" secondAttribute="bottom" constant="8" symbolic="YES" id="aDM-Gn-6vi"/>
+                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="eFk-XP-Ktt" secondAttribute="trailing" constant="20" id="cBs-nE-jh2"/>
+                            <constraint firstItem="CvY-TW-Kyu" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="dVv-04-0mV"/>
+                            <constraint firstItem="wdf-Ei-d1q" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="dWX-0M-pdz"/>
+                            <constraint firstItem="GmC-vp-qUR" firstAttribute="top" secondItem="iMz-30-5rf" secondAttribute="bottom" constant="8" symbolic="YES" id="eF5-eV-QNr"/>
+                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="GmC-vp-qUR" secondAttribute="trailing" constant="20" id="fN7-5r-tXg"/>
+                            <constraint firstItem="6qT-Hw-n0t" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="fzD-ej-hGz"/>
+                            <constraint firstItem="iMz-30-5rf" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="g7I-WD-2nf"/>
+                            <constraint firstItem="fMN-w7-XD8" firstAttribute="top" secondItem="6qT-Hw-n0t" secondAttribute="bottom" constant="8" symbolic="YES" id="gIX-DI-WDO"/>
+                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="mS7-wm-FIB" secondAttribute="trailing" constant="20" id="j66-7d-26L"/>
+                            <constraint firstItem="XFZ-7n-Pe2" firstAttribute="leading" secondItem="KRW-hu-fe8" secondAttribute="leading" constant="20" id="jtl-88-Edv"/>
+                            <constraint firstItem="wdf-Ei-d1q" firstAttribute="top" secondItem="mS7-wm-FIB" secondAttribute="bottom" constant="8" symbolic="YES" id="mhU-RJ-ntP"/>
+                            <constraint firstItem="XFZ-7n-Pe2" firstAttribute="top" secondItem="GmC-vp-qUR" secondAttribute="bottom" constant="36" id="oxw-tt-2kR"/>
+                            <constraint firstItem="fMN-w7-XD8" firstAttribute="bottom" secondItem="KRW-hu-fe8" secondAttribute="bottom" id="pHG-fl-0DT"/>
+                            <constraint firstItem="CvY-TW-Kyu" firstAttribute="top" secondItem="XFZ-7n-Pe2" secondAttribute="bottom" constant="8" symbolic="YES" id="tXn-d5-p45"/>
+                            <constraint firstItem="iMz-30-5rf" firstAttribute="top" secondItem="wdf-Ei-d1q" secondAttribute="bottom" constant="8" symbolic="YES" id="tht-HB-7ab"/>
+                            <constraint firstItem="mS7-wm-FIB" firstAttribute="top" secondItem="eFk-XP-Ktt" secondAttribute="bottom" constant="8" symbolic="YES" id="u8H-pw-00b"/>
+                            <constraint firstItem="fMN-w7-XD8" firstAttribute="top" secondItem="6qT-Hw-n0t" secondAttribute="bottom" constant="8" symbolic="YES" id="ud0-qu-ahI"/>
+                            <constraint firstItem="KRW-hu-fe8" firstAttribute="trailing" secondItem="fMN-w7-XD8" secondAttribute="trailing" constant="20" id="zt3-7o-WHD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sel-Rt-LpL"/>

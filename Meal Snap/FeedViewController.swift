@@ -47,7 +47,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
                     self.posts = posts!
                     self.collectionView.reloadData()
                 }
-                print(posts)
+                //print(posts)
             }
         }
     
@@ -77,7 +77,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
             let urlString = imageFile.url!
             let url = URL(string: urlString)!
         
-            cell.FoodImageCell.af_setImage(withURL: url)
+            cell.FoodImageCell.af.setImage(withURL: url)
         }
         return cell
     }

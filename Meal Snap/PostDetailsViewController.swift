@@ -64,14 +64,6 @@ class PostDetailsViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         let next = segue.destination as? RecipeDetailsViewController
-        
-        //let imageFile = imageView.image!.pngData()
-        //let file = PFFileObject(data: imageFile!)
-        
-        //next?.post["image"] = file
-        //next?.post["postTitle"] = titleLabel.text!
-        //next?.post["caption"] = descriptionLabel.text!
-       // next?.user = post["author"]
         next?.recipe = post
     }
 }

@@ -17,14 +17,12 @@ class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var instructions: UILabel!
     
     var recipe = PFObject(className: "Recipe")
-    //var user = PFUser()
-    //var recipe = PFObject!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         recipeTitle.text = recipe["recipeTitle"] as? String
-        foodRestrictions.text = recipe["restrictions"] as? String
+        foodRestrictions.text = recipe["restriction"] as? String
         foodCategory.text = recipe["category"] as? String
         ingredients.text = recipe["ingredients"] as? String
         instructions.text = recipe["instructions"] as? String

@@ -39,14 +39,14 @@ We wanted to separate the food out of all social media and have it in one social
 * [x] User can login
 * [x] User can register
 * [x] User can create posts
-    * [] Each post must have allergy warnings - in progress but debugging
 * [x] User can view the feed
+    * [x] User can view specific posts
+        * [x] User can view the recipe connected to each post
 
 **Optional Nice-to-have Stories**
 
 * [x] User can view their profile 
 * [] User can edit their profile - almost done but debugging
-* [x] User can view specific posts
 * [] User can like posts
 * [] User can search for food filters
 
@@ -62,9 +62,9 @@ Here's a walkthrough of the implemented user stories:
 <img src='http://g.recordit.co/ISafuE71pu.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### Unit 11 GIF
-- By now users can see the feedview more neatly as a proper grid
+- In addition to Unit 10's accomplishment, users can now see the feedview more neatly as a proper grid with 3 per row.
 - Users can also view their profiles with their username 
-- Users can as well see the recipes associated to all the posts which are one to one unique relationship
+- Users can as well see the recipes associated to all the posts which are one to one unique relationship as well as the users who uploaded the post.
 
 <img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
@@ -78,6 +78,9 @@ Here's a walkthrough of the implemented user stories:
 - We plan on soon having finished the likes count implementation by this unit
 - We also plan on trying out a search filtering mechanism here where users can search for posts with certain hashtags such as #nopeanuts, or #vegan... etc
 <img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+### Unit 14 GIF
+- We plan on implementing a search by hashtag mechanism here if we can. This is optional.
 
 
 ### 2. Screen Archetypes
