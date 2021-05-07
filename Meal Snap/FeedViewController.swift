@@ -23,6 +23,14 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         // Do any additional setup after loading the view.
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 2
+        layout.minimumInteritemSpacing = 2
+        
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing*2) / 3
+        layout.itemSize = CGSize(width: width, height: width*1.1)
 
     }
     
@@ -30,8 +38,8 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
             super.viewDidAppear(animated)
 
             //here I will make the query
-            let query = PFQuery(className: "Posts")
-            query.includeKeys(["author"])
+            let query = PFQuery(className: "Recipe")
+            query.includeKeys(["author.username"])
             query.limit = 20 //get the last 20
 
             query.findObjectsInBackground { (posts, error) in
@@ -39,7 +47,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
                     self.posts = posts!
                     self.collectionView.reloadData()
                 }
-                print(posts)
+                //print(posts)
             }
         }
     
@@ -61,16 +69,16 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
 
         let post = posts[indexPath.item]
 
-        let user = post["author"] as! PFUser
-        cell.PostUsername.text = user.username
-
-        let imageFile = post["image"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
-
-//                remember the ?? are about optionals!
-        cell.FoodImageCell.af_setImage(withURL: url)
-    
+        if let user = post["author"] as? PFUser{
+            cell.PostUsername.text = user.username
+        }
+        
+        if let imageFile = post["image"] as? PFFileObject {
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+        
+            cell.FoodImageCell.af.setImage(withURL: url)
+        }
         return cell
     }
     
@@ -90,6 +98,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         //Task 2 - Store posts into details controller
         let detailsViewController = segue.destination as! PostDetailsViewController
         detailsViewController.post = post
+        detailsViewController.user = post["author"] as! PFUser
 
         //while transitioning, this disables the highlighted feature of each cell that was selected
         collectionView.deselectItem(at: indexPath, animated: true)

@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		525CD27951588B6819D037D5 /* Pods_Meal_Snap_Meal_SnapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4429E189666E1850C77F767F /* Pods_Meal_Snap_Meal_SnapUITests.framework */; };
-		58105166262A3092002A8BB7 /* UploadPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58105165262A3092002A8BB7 /* UploadPhotoViewController.swift */; };
 		A3D0BF11261CC0F1001E58C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0BF10261CC0F1001E58C2 /* LoginViewController.swift */; };
 		A3D0BF16261CC126001E58C2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D0BF15261CC126001E58C2 /* FeedViewController.swift */; };
 		B93EFDE02631C86F00BF7F4E /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93EFDDF2631C86F00BF7F4E /* PostCell.swift */; };
 		B951EDD46F0C638D3A718EFF /* Pods_Meal_Snap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CC2E468DDD4C82FEDEDE18 /* Pods_Meal_Snap.framework */; };
+		E01CB0F426449C90006C2C04 /* RecipeUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB0F326449C90006C2C04 /* RecipeUploadViewController.swift */; };
+		E01CB0F926449CA0006C2C04 /* PostUploadNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB0F826449CA0006C2C04 /* PostUploadNextViewController.swift */; };
+		E0CF0BC22644655C00F3EE0A /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF0BC12644655C00F3EE0A /* RecipeDetailsViewController.swift */; };
+		E0CF0BC726446A0400F3EE0A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF0BC626446A0400F3EE0A /* ProfileViewController.swift */; };
+		E0CF0BCC26446B4600F3EE0A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF0BCB26446B4600F3EE0A /* SettingsViewController.swift */; };
 		E0D3EED326160F2D004D5E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3EED226160F2D004D5E66 /* AppDelegate.swift */; };
 		E0D3EED526160F2D004D5E66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3EED426160F2D004D5E66 /* SceneDelegate.swift */; };
 		E0D3EED726160F2D004D5E66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3EED626160F2D004D5E66 /* ViewController.swift */; };
@@ -47,7 +51,6 @@
 		3A154CF11B73BA8D7FBB03E3 /* Pods-Meal SnapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal SnapTests.release.xcconfig"; path = "Target Support Files/Pods-Meal SnapTests/Pods-Meal SnapTests.release.xcconfig"; sourceTree = "<group>"; };
 		4429E189666E1850C77F767F /* Pods_Meal_Snap_Meal_SnapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meal_Snap_Meal_SnapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B6218F9836033B7A4A8AB9 /* Pods_Meal_SnapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meal_SnapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58105165262A3092002A8BB7 /* UploadPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPhotoViewController.swift; sourceTree = "<group>"; };
 		77351486D840BDA4BC0C1FE7 /* Pods-Meal Snap-Meal SnapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Snap-Meal SnapUITests.debug.xcconfig"; path = "Target Support Files/Pods-Meal Snap-Meal SnapUITests/Pods-Meal Snap-Meal SnapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F7A590D01B53767E5803551 /* Pods-Meal Snap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Snap.debug.xcconfig"; path = "Target Support Files/Pods-Meal Snap/Pods-Meal Snap.debug.xcconfig"; sourceTree = "<group>"; };
 		88933E815C7A5A638C5CF90B /* Pods-Meal SnapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal SnapTests.debug.xcconfig"; path = "Target Support Files/Pods-Meal SnapTests/Pods-Meal SnapTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -56,6 +59,11 @@
 		B85EEFE9AFDA65A38DC178E4 /* Pods-Meal Snap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meal Snap.release.xcconfig"; path = "Target Support Files/Pods-Meal Snap/Pods-Meal Snap.release.xcconfig"; sourceTree = "<group>"; };
 		B93EFDDF2631C86F00BF7F4E /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		D0CC2E468DDD4C82FEDEDE18 /* Pods_Meal_Snap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meal_Snap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E01CB0F326449C90006C2C04 /* RecipeUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeUploadViewController.swift; sourceTree = "<group>"; };
+		E01CB0F826449CA0006C2C04 /* PostUploadNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUploadNextViewController.swift; sourceTree = "<group>"; };
+		E0CF0BC12644655C00F3EE0A /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		E0CF0BC626446A0400F3EE0A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E0CF0BCB26446B4600F3EE0A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E0D3EECF26160F2D004D5E66 /* Meal Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Snap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D3EED226160F2D004D5E66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0D3EED426160F2D004D5E66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,13 +162,17 @@
 				E0D3EED626160F2D004D5E66 /* ViewController.swift */,
 				A3D0BF10261CC0F1001E58C2 /* LoginViewController.swift */,
 				A3D0BF15261CC126001E58C2 /* FeedViewController.swift */,
-				58105165262A3092002A8BB7 /* UploadPhotoViewController.swift */,
 				E0D3EED826160F2D004D5E66 /* Main.storyboard */,
 				E0D3EEDB26160F2D004D5E66 /* Assets.xcassets */,
 				E0D3EEDD26160F2D004D5E66 /* LaunchScreen.storyboard */,
 				E0D3EEE026160F2D004D5E66 /* Info.plist */,
 				B93EFDDF2631C86F00BF7F4E /* PostCell.swift */,
 				E0F60CC62634843B00DFE7F3 /* PostDetailsViewController.swift */,
+				E0CF0BC12644655C00F3EE0A /* RecipeDetailsViewController.swift */,
+				E0CF0BC626446A0400F3EE0A /* ProfileViewController.swift */,
+				E0CF0BCB26446B4600F3EE0A /* SettingsViewController.swift */,
+				E01CB0F326449C90006C2C04 /* RecipeUploadViewController.swift */,
+				E01CB0F826449CA0006C2C04 /* PostUploadNextViewController.swift */,
 			);
 			path = "Meal Snap";
 			sourceTree = "<group>";
@@ -421,14 +433,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E01CB0F426449C90006C2C04 /* RecipeUploadViewController.swift in Sources */,
 				B93EFDE02631C86F00BF7F4E /* PostCell.swift in Sources */,
 				A3D0BF11261CC0F1001E58C2 /* LoginViewController.swift in Sources */,
+				E0CF0BC22644655C00F3EE0A /* RecipeDetailsViewController.swift in Sources */,
 				E0D3EED726160F2D004D5E66 /* ViewController.swift in Sources */,
 				E0D3EED326160F2D004D5E66 /* AppDelegate.swift in Sources */,
+				E0CF0BC726446A0400F3EE0A /* ProfileViewController.swift in Sources */,
+				E01CB0F926449CA0006C2C04 /* PostUploadNextViewController.swift in Sources */,
 				E0D3EED526160F2D004D5E66 /* SceneDelegate.swift in Sources */,
 				E0F60CC72634843B00DFE7F3 /* PostDetailsViewController.swift in Sources */,
-				58105166262A3092002A8BB7 /* UploadPhotoViewController.swift in Sources */,
 				A3D0BF16261CC126001E58C2 /* FeedViewController.swift in Sources */,
+				E0CF0BCC26446B4600F3EE0A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

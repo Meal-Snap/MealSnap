@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     $0.server = "https://parseapi.back4app.com"
             }
             Parse.initialize(with: parseConfig)
-
+        //print(PFUser.current())
         return true
     }
 
