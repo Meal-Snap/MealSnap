@@ -66,7 +66,7 @@ Here's a walkthrough of the implemented user stories:
 - Users can also view their profiles with their username 
 - Users can as well see the recipes associated to all the posts which are one to one unique relationship as well as the users who uploaded the post.
 
-<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/Meal-Snap/MealSnap' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ### Unit 12 GIF
