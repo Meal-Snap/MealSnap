@@ -16,9 +16,16 @@ class PostDetailsViewController: UIViewController {
     @IBOutlet weak var imagePost: UIImageView!
     @IBOutlet weak var postNameLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
-    
+    @IBOutlet weak var likeButton: UIButton!
     var post: PFObject!
     var user = PFUser()
+    var ifLiked: Bool = false //Nancy Ng Like Button Implementation
+    
+    var likedArray:[PFUser]!
+    
+        
+ 
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +54,74 @@ class PostDetailsViewController: UIViewController {
         }
         
     }
+    
+    
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        likedArray = post["Liked"] as? [PFUser]
+        likedBefore()
+    }
+    
+    @IBAction func likeButton(_ sender: Any) {
+        likedBefore()
+        
+        if !(likedBefore()){
+            userLiked()
+        }
+    }
+    //checking if the user has liked the post before
+    func likedBefore()->Bool{
+       
+        //it's always going to be an array so use !
+        let liked_before = likedArray.contains(PFUser.current()!)
+        
+        if(liked_before){
+            likeButton.setImage(UIImage(named:"heart_filled"), for: UIControl.State.normal)
+        }
+        else{
+            likeButton.setImage(UIImage(named:"heart_empty"), for: UIControl.State.normal)
+            
+        }
+        return liked_before
+        
+    }
+    
+    //calls setLiked button to set the image below
+ 
+    func userLiked() {
+        likedArray.append(PFUser.current()!)
+        updateParse()
+    }
+    
+//    //for user unliked- save for unit 12
+//    func UnlikedPost()  {
+//        //find user
+//
+//        //iterate through array and to remove at specifc index
+//
+//        //save in background
+//
+//
+//
+//
+//    }
+    
+    
+    //this function is called when it is liked, 
+        let query = PFQuery(className:"Recipe")
+  
+        query.getObjectInBackground(withId: post.objectId!) { (post: PFObject?, error: Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let post = post {
+                post["Liked"]  = self.likedArray
+                post.saveInBackground()
+            }
+        }
+        
+    }
+
     
     @IBOutlet weak var recipeButton: UIButton!{
         didSet{
