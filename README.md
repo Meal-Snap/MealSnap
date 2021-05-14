@@ -47,8 +47,9 @@ We wanted to separate the food out of all social media and have it in one social
 
 * [x] User can view their profile 
 * [] User can edit their profile - almost done but debugging
-* [] User can like posts
+* [x] User can like posts
 * [] User can search for food filters
+* [] tap filled heart to unlike post 
 
 ##  Video Walkthrough
 
@@ -70,13 +71,15 @@ Here's a walkthrough of the implemented user stories:
 
 
 ### Unit 12 GIF
-- We plan on finishing our SettingsController here where Users should be able to edit their profile pic and their preferences and bio
-<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+- We finished implementing the like button, that adds the user to an array in the parse and made a query to update the object in Parse.
+- Users can now like the posts on the PostViewController. 
+<img src='http://g.recordit.co/H9UDyx28oG.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ### Unit 13 GIF
 - We plan on soon having finished the likes count implementation by this unit
 - We also plan on trying out a search filtering mechanism here where users can search for posts with certain hashtags such as #nopeanuts, or #vegan... etc
+-  The unlike function, where the user taps the filled heart and it unfills it
 <img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### Unit 14 GIF
