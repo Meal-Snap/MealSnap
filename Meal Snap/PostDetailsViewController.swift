@@ -63,11 +63,11 @@ class PostDetailsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         likedArray = post["Liked"] as? [PFUser]
-        print(likedBefore())
+        likedBefore()
     }
     
     @IBAction func likeButton(_ sender: Any) {
-        print(likedBefore())
+        likedBefore()
         
         if !(likedBefore()){
             userLiked()
@@ -75,21 +75,10 @@ class PostDetailsViewController: UIViewController {
         else if (likedBefore()){
             UnlikedPost()
         }
-//        else { //Maybe unlike Post should be here
-//            UnlikedPost()                                                                           //This may be WRONG HERE
-//        }
     }
     
-//    @IBAction func unLikeButton(_ sender: Any) {
-//        likedBefore()
-//
-//        if (likedBefore()){
-//            print("unliked post")
-//            UnlikedPost()
-//        }
-//    }
-    
-    
+
+
     //checking if the user has liked the post before
     func likedBefore()->Bool{
        
@@ -107,18 +96,25 @@ class PostDetailsViewController: UIViewController {
         
     }
     
+    //another method, add tap gesture recognizer, so that if it is unfilled, then fill it, and doing so would solidate the whole thing into one function
+    // -> if user UNLIKES -> if likedArray contains the user, remove them and then unfill array
+    // -> if user LIKES -> append to likedArray, and then fill heart.
+    // if user is IN the array, then they are unliking it, and if they
+    // are NOT in the array then you should add them.
+    
     //calls setLiked button to set the image below
  
     func userLiked() {
         print("liking now")
         likedArray.append(PFUser.current()!)
+        likedBefore()
         updateParse()
     }
     
     //for user unliked- save for unit 12
     func UnlikedPost()  {
         print("unliking now")
-        let query = PFQuery(className:"Recipe")
+//        let query = PFQuery(className:"Recipe")
         
         //find user
         let targetToUnlike = PFUser.current()!
@@ -128,27 +124,30 @@ class PostDetailsViewController: UIViewController {
         for i in likedArray {
             if(i == targetToUnlike){
                 likedArray.remove(at: num)
-                updateParse()
+                likedBefore()
                 print("successfully removed")
             }
             num = 1 + num
         }
         
+        
         //save in background
-        query.getObjectInBackground(withId: post.objectId!) { (post: PFObject?, error: Error?) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let post = post {
-                post["Liked"]  = self.likedArray
-                post.saveInBackground()
-            }
-        }
+        updateParse()
+
+//        query.getObjectInBackground(withId: post.objectId!) { (post: PFObject?, error: Error?) in
+//            if let error = error {
+//                print(error.localizedDescription)
+//            } else if let post = post {
+//                post["Liked"]  = self.likedArray
+//                post.saveInBackground()
+//            }
+//        }
     }
     
     func updateParse(){
     //this function is called when it is liked, 
         let query = PFQuery(className:"Recipe")
-  
+        likedBefore()
         query.getObjectInBackground(withId: post.objectId!) { (post: PFObject?, error: Error?) in
             if let error = error {
                 print(error.localizedDescription)
