@@ -18,7 +18,10 @@ class PostDetailsViewController: UIViewController {
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     var post: PFObject!
+    
     var user = PFUser()
+    
+    //Two lines below are for Liked Feature
     var ifLiked: Bool = false //Nancy Ng Like Button Implementation
     
     var likedArray:[PFUser]!
@@ -60,23 +63,40 @@ class PostDetailsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         likedArray = post["Liked"] as? [PFUser]
-        likedBefore()
+        print(likedBefore())
     }
     
     @IBAction func likeButton(_ sender: Any) {
-        likedBefore()
+        print(likedBefore())
         
         if !(likedBefore()){
             userLiked()
         }
+        else if (likedBefore()){
+            UnlikedPost()
+        }
+//        else { //Maybe unlike Post should be here
+//            UnlikedPost()                                                                           //This may be WRONG HERE
+//        }
     }
+    
+//    @IBAction func unLikeButton(_ sender: Any) {
+//        likedBefore()
+//
+//        if (likedBefore()){
+//            print("unliked post")
+//            UnlikedPost()
+//        }
+//    }
+    
+    
     //checking if the user has liked the post before
     func likedBefore()->Bool{
        
         //it's always going to be an array so use !
         let liked_before = likedArray.contains(PFUser.current()!)
         
-        if(liked_before){
+        if (liked_before){
             likeButton.setImage(UIImage(named:"heart_filled"), for: UIControl.State.normal)
         }
         else{
@@ -90,24 +110,42 @@ class PostDetailsViewController: UIViewController {
     //calls setLiked button to set the image below
  
     func userLiked() {
+        print("liking now")
         likedArray.append(PFUser.current()!)
         updateParse()
     }
     
-//    //for user unliked- save for unit 12
-//    func UnlikedPost()  {
-//        //find user
-//
-//        //iterate through array and to remove at specifc index
-//
-//        //save in background
-//
-//
-//
-//
-//    }
+    //for user unliked- save for unit 12
+    func UnlikedPost()  {
+        print("unliking now")
+        let query = PFQuery(className:"Recipe")
+        
+        //find user
+        let targetToUnlike = PFUser.current()!
+       
+        //iterate through array and to remove at specific index
+        var num = 0
+        for i in likedArray {
+            if(i == targetToUnlike){
+                likedArray.remove(at: num)
+                updateParse()
+                print("successfully removed")
+            }
+            num = 1 + num
+        }
+        
+        //save in background
+        query.getObjectInBackground(withId: post.objectId!) { (post: PFObject?, error: Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let post = post {
+                post["Liked"]  = self.likedArray
+                post.saveInBackground()
+            }
+        }
+    }
     
-    
+    func updateParse(){
     //this function is called when it is liked, 
         let query = PFQuery(className:"Recipe")
   
