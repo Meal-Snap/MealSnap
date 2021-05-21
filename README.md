@@ -77,14 +77,13 @@ Here's a walkthrough of the implemented user stories:
 
 
 ### Unit 13 GIF
-- We plan on soon having finished the likes count implementation by this unit <---- put this on a hold maybe. waiting for team confirmation. 
+- We plan to have unlike function, where the user taps the filled heart and it unfills it. At this point we are finished and have a MVP!
+<img src='http://g.recordit.co/KdvejEeInP.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+### Unit 14 GIF - [OPTIONAL FEATURES]
+- We plan on implementing a search by hashtag mechanism here if we can.
 - We plan to have a profile picture 
 - We also plan on trying out a search filtering mechanism here where users can search for posts with certain hashtags such as #nopeanuts, or #vegan... etc
-- We plan to have unlike function, where the user taps the filled heart and it unfills it
-<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-### Unit 14 GIF
-- We plan on implementing a search by hashtag mechanism here if we can. This is optional.
 
 
 ### 2. Screen Archetypes

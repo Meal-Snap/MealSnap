@@ -55,7 +55,6 @@ class PostDetailsViewController: UIViewController {
             //Use alamofireimage for user profile pic
             userImage.af.setImage(withURL: userimageURL)
         }
-        
     }
     
     
@@ -64,6 +63,8 @@ class PostDetailsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         likedArray = post["Liked"] as? [PFUser]
         likedBefore()
+
+        print("is it liked before: " , likedBefore())
     }
     
     @IBAction func likeButton(_ sender: Any) {
@@ -77,8 +78,6 @@ class PostDetailsViewController: UIViewController {
         }
     }
     
-
-
     //checking if the user has liked the post before
     func likedBefore()->Bool{
        
@@ -114,7 +113,7 @@ class PostDetailsViewController: UIViewController {
     //for user unliked- save for unit 12
     func UnlikedPost()  {
         print("unliking now")
-//        let query = PFQuery(className:"Recipe")
+        let query = PFQuery(className:"Recipe")
         
         //find user
         let targetToUnlike = PFUser.current()!
@@ -132,22 +131,21 @@ class PostDetailsViewController: UIViewController {
         
         
         //save in background
+        query.getObjectInBackground(withId: post.objectId!) { (post: PFObject?, error: Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let post = post {
+                post["Liked"]  = self.likedArray
+                post.saveInBackground()
+            }
+        }
         updateParse()
 
-//        query.getObjectInBackground(withId: post.objectId!) { (post: PFObject?, error: Error?) in
-//            if let error = error {
-//                print(error.localizedDescription)
-//            } else if let post = post {
-//                post["Liked"]  = self.likedArray
-//                post.saveInBackground()
-//            }
-//        }
     }
     
     func updateParse(){
     //this function is called when it is liked, 
         let query = PFQuery(className:"Recipe")
-        likedBefore()
         query.getObjectInBackground(withId: post.objectId!) { (post: PFObject?, error: Error?) in
             if let error = error {
                 print(error.localizedDescription)
