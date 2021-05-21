@@ -77,7 +77,7 @@ Here's a walkthrough of the implemented user stories:
 
 
 ### Unit 13 GIF
-- We plan to have unlike function, where the user taps the filled heart and it unfills it. At this point we are finished and have a MVP!
+- We have finished the unlike function, where the user taps the filled heart and it unfills it. It is confirmed through with testing our Parse backend. At this point we are finished and have a MVP!
 <img src='http://g.recordit.co/KdvejEeInP.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### Unit 14 GIF - [OPTIONAL FEATURES]
