@@ -15,8 +15,6 @@
 		E01CB0F426449C90006C2C04 /* RecipeUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB0F326449C90006C2C04 /* RecipeUploadViewController.swift */; };
 		E01CB0F926449CA0006C2C04 /* PostUploadNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01CB0F826449CA0006C2C04 /* PostUploadNextViewController.swift */; };
 		E0CF0BC22644655C00F3EE0A /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF0BC12644655C00F3EE0A /* RecipeDetailsViewController.swift */; };
-		E0CF0BC726446A0400F3EE0A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF0BC626446A0400F3EE0A /* ProfileViewController.swift */; };
-		E0CF0BCC26446B4600F3EE0A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF0BCB26446B4600F3EE0A /* SettingsViewController.swift */; };
 		E0D3EED326160F2D004D5E66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3EED226160F2D004D5E66 /* AppDelegate.swift */; };
 		E0D3EED526160F2D004D5E66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3EED426160F2D004D5E66 /* SceneDelegate.swift */; };
 		E0D3EED726160F2D004D5E66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3EED626160F2D004D5E66 /* ViewController.swift */; };
@@ -62,8 +60,6 @@
 		E01CB0F326449C90006C2C04 /* RecipeUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeUploadViewController.swift; sourceTree = "<group>"; };
 		E01CB0F826449CA0006C2C04 /* PostUploadNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostUploadNextViewController.swift; sourceTree = "<group>"; };
 		E0CF0BC12644655C00F3EE0A /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
-		E0CF0BC626446A0400F3EE0A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		E0CF0BCB26446B4600F3EE0A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E0D3EECF26160F2D004D5E66 /* Meal Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Snap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D3EED226160F2D004D5E66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0D3EED426160F2D004D5E66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,8 +165,6 @@
 				B93EFDDF2631C86F00BF7F4E /* PostCell.swift */,
 				E0F60CC62634843B00DFE7F3 /* PostDetailsViewController.swift */,
 				E0CF0BC12644655C00F3EE0A /* RecipeDetailsViewController.swift */,
-				E0CF0BC626446A0400F3EE0A /* ProfileViewController.swift */,
-				E0CF0BCB26446B4600F3EE0A /* SettingsViewController.swift */,
 				E01CB0F326449C90006C2C04 /* RecipeUploadViewController.swift */,
 				E01CB0F826449CA0006C2C04 /* PostUploadNextViewController.swift */,
 			);
@@ -439,12 +433,10 @@
 				E0CF0BC22644655C00F3EE0A /* RecipeDetailsViewController.swift in Sources */,
 				E0D3EED726160F2D004D5E66 /* ViewController.swift in Sources */,
 				E0D3EED326160F2D004D5E66 /* AppDelegate.swift in Sources */,
-				E0CF0BC726446A0400F3EE0A /* ProfileViewController.swift in Sources */,
 				E01CB0F926449CA0006C2C04 /* PostUploadNextViewController.swift in Sources */,
 				E0D3EED526160F2D004D5E66 /* SceneDelegate.swift in Sources */,
 				E0F60CC72634843B00DFE7F3 /* PostDetailsViewController.swift in Sources */,
 				A3D0BF16261CC126001E58C2 /* FeedViewController.swift in Sources */,
-				E0CF0BCC26446B4600F3EE0A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
