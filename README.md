@@ -45,11 +45,8 @@ We wanted to separate the food out of all social media and have it in one social
 
 **Optional Nice-to-have Stories**
 
-* [x] User can view their profile 
-* [] User can edit their profile - almost done but debugging
 * [x] User can like posts
-* [] User can search for food filters
-* [] tap filled heart to unlike post 
+* [x] tap filled heart to unlike post 
 
 ##  Video Walkthrough
 
@@ -80,10 +77,9 @@ Here's a walkthrough of the implemented user stories:
 - We have finished the unlike function, where the user taps the filled heart and it unfills it. It is confirmed through with testing our Parse backend. At this point we are finished and have a MVP!
 <img src='http://g.recordit.co/KdvejEeInP.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-### Unit 14 GIF - [OPTIONAL FEATURES]
-- We plan on implementing a search by hashtag mechanism here if we can.
-- We plan to have a profile picture 
-- We also plan on trying out a search filtering mechanism here where users can search for posts with certain hashtags such as #nopeanuts, or #vegan... etc
+### Unit 14 GIF 
+- We implemented scrolling feature for Post's detail and recipe views. We plan on implementing User search bar experience and also letting users add videos into their post hopefully.
+<img src='http://g.recordit.co/tFgU8rYhYU.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ### 2. Screen Archetypes
